@@ -34,6 +34,14 @@
 // import 'core-js/es6/weak-map';
 // import 'core-js/es6/set';
 
+import * as process from 'process';
+(window as any).process = process;
+
+(window as any).global = window;
+
+import * as _buffer from 'buffer';
+(window as any).Buffer = _buffer.Buffer; // note: the trailing slash is important!
+
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
