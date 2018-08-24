@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
 import { FileDropModule } from 'ngx-file-drop';
 
 @NgModule({
@@ -17,7 +15,6 @@ import { FileDropModule } from 'ngx-file-drop';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    NgbModule,
     FileDropModule
   ],
   providers: [],
