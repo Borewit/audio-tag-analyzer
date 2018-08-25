@@ -10,7 +10,7 @@ Drag and drop any audio file and it extract ans list the music metadata found.
 
 ## Live version
 
-###[Show me](https://audio-tag-analyzer.netlify.com/)
+### [:rocket: Show me](https://audio-tag-analyzer.netlify.com/)
 
 ## Development server
 
