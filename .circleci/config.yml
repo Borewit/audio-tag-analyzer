@@ -30,7 +30,7 @@ jobs:
       - run: npm list -g --depth=0
 
       # Update yarn
-      - run: npm install yarn -g
+      - run: sudo npm install -g yarn
 
       # Install dependencies
       - run: yarn install
