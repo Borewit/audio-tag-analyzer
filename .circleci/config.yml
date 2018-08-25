@@ -29,8 +29,8 @@ jobs:
       # Check global installed NPM-modules
       - run: npm list -g --depth=0
 
-      # Update yarn
-      - run: sudo npm install -g yarn
+      # Update/install yarn & Angular
+      - run: sudo npm install -g yarn @angular/cli
 
       # Install dependencies
       - run: yarn install
