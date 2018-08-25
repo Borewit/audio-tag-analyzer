@@ -1,6 +1,12 @@
-# AudioTagAnalyzer
+[![Build Status](https://travis-ci.org/Borewit/audio-tag-analyzer.svg?branch=master)](https://travis-ci.org/Borewit/audio-tag-analyzer)
+[![Dependencies](https://david-dm.org/Borewit/audio-tag-analyzer.svg)](https://david-dm.org/Borewit/audio-tag-analyzer)
+[![NSP Status](https://nodesecurity.io/orgs/borewit/projects/a88dd971-3a40-4396-8057-16afdb6a9ac4/badge)](https://nodesecurity.io/orgs/borewit/projects/a88dd971-3a40-4396-8057-16afdb6a9ac4)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+# Audio Tag Analyzer
+
+Project demonstrating [music-metadata](https://github.com/Borewit/music-metadata-browser).
+Drag and drop any audio file and it extract ans list the music metadata found.
+A live version of the latest build can be found [here](https://audio-tag-analyzer.netlify.com/).
 
 ## Development server
 
