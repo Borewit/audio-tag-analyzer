@@ -6,4 +6,4 @@ node_js:
 install:
 - yarn install
 script:
-- ng build
+- ng build --prod
