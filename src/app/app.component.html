@@ -2,62 +2,97 @@
 <div class="container">
   <h1>Audio Tag Analyzer</h1>
 
-  <p>Powered by <a href="https://github.com/Borewit/music-metadata">music-metadata</a>. Source code can be found on <a href="https://github.com/Borewit/audio-tag-analyzer">GitHub</a>.</p>
+  <p>Powered by <a href="https://github.com/Borewit/music-metadata">music-metadata</a>. Source code can be found on <a
+    href="https://github.com/Borewit/audio-tag-analyzer">GitHub</a>.</p>
 
-   <div class="center">
-    <file-drop (onFileDrop)="dropped($event)"
-               (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
-      <span>Drop your audio file(s) you wish to analyse here.<br/>
-        Note these files will <b>not</b> be uploaded anywhere.<br/>
-        Instead they will be processed by your local browser only.
-      </span>
-    </file-drop>
+  <div class="center">
+    <app-drag-and-drop-box (onFilesDrop)="handleFilesDropped($event)"
+                           (onFilesEnter)="handleFilesEnter($event)"
+                           (onFilesLeave)="handleFilesLeave($event)">
+      <h3>Drop your audio files for here</h3>
+      <hr class="my-4">
+      <p>Files dropped files will stay within your local browser and not uploaded anywhere else.</p>
+    </app-drag-and-drop-box>
     <div *ngFor="let upload of uploads">
 
       <h4>File information</h4>
       <table class="table">
-        <tr><td>Name</td><td>{{ upload.fileEntry.name }}</td></tr>
-        <tr><td>File type</td><td>{{ upload.file.type }}</td></tr>
+        <tr>
+          <td>Name</td>
+          <td>{{ upload.file.name }}</td>
+        </tr>
+        <tr>
+          <td>File type</td>
+          <td>{{ upload.file.type }}</td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td>{{ upload.file.size }}</td>
+        </tr>
+        <tr>
+          <td>Last modified</td>
+          <td>{{ upload.file.lastModifiedDate }}</td>
+        </tr>
       </table>
 
-      <div *ngIf="upload.metadata.common.picture">
-        <h4>Embedded cover art</h4>
-        <div *ngFor="let picture of upload.metadata.common.picture">
-          <table class="table">
-            <tr><td>Format</td><td>{{ picture.format }}</td></tr>
-            <tr><td>Type</td><td>{{ picture.type }}</td></tr>
-            <tr><td>Description</td><td>{{ picture.description }}</td></tr>
-          </table>
-          <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
-        </div>
+      <div *ngIf="!upload.metadata" class="alert alert-info">
+        Parsing...
       </div>
 
       <div *ngIf="upload.parseError" class="alert alert-severe">
         {{ upload.parseError.message }}
       </div>
 
-      <div *ngFor="let tagList of tagLists">
+      <div *ngIf="upload.metadata">
+        <div *ngIf="upload.metadata.common.picture">
+          <h4>Embedded cover art</h4>
+          <div *ngFor="let picture of upload.metadata.common.picture">
+            <table class="table">
+              <tr>
+                <td>Format</td>
+                <td>{{ picture.format }}</td>
+              </tr>
+              <tr>
+                <td>Type</td>
+                <td>{{ picture.type }}</td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td>{{ picture.description }}</td>
+              </tr>
+            </table>
+            <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
+          </div>
+        </div>
 
-        <h4>{{ tagList.title }}</h4>
+        <div *ngFor="let tagList of tagLists">
 
-        <table class="table">
-          <tr>
-            <th>Label</th>
-            <th>Value</th>
-            <th>Property name</th>
-          </tr>
-          <tr *ngFor="let tag of tagList.tags">
-            <td><a *ngIf="tag.ref" target="_blank" href="{{tag.ref}}">{{tag.label}}</a><span *ngIf="!tag.ref">{{tag.label}}</span></td>
-            <td>{{tag.value}}</td>
-            <td>{{tag.key}}</td>
-          </tr>
-        </table>
+          <h4>{{ tagList.title }}</h4>
 
+          <table class="table">
+            <tr>
+              <th>Label</th>
+              <th>Value</th>
+              <th>Property name</th>
+            </tr>
+            <tr *ngFor="let tag of tagList.tags">
+              <td><a *ngIf="tag.label.ref" target="_blank" [href]="tag.label.ref">{{tag.label.text}}</a><span
+                *ngIf="!tag.label.ref">{{tag.label.text}}</span></td>
+              <td>
+                <div *ngFor="let v of tag.value; let first = first;">
+                  <span *ngIf="!first">, </span>
+                  <a *ngIf="v.ref" target="_blank" [href]="v.ref">{{v.text}}</a>
+                  <span *ngIf="!v.ref">{{v.text}}</span>
+                </div>
+              </td>
+              <td>{{tag.key}}</td>
+            </tr>
+          </table>
+
+        </div>
       </div>
     </div>
 
   </div>
 
 </div>
-
-
