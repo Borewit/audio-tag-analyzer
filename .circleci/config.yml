@@ -30,7 +30,7 @@ jobs:
       - run: npm list -g --depth=0
 
       # Install dependencies
-      - run: npm install
+      - run: yarn install
 
       - save_cache:
           paths:
