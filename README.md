@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master.svg?style=shield)](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master)
 [![Build Status](https://travis-ci.org/Borewit/audio-tag-analyzer.svg?branch=master)](https://travis-ci.org/Borewit/audio-tag-analyzer)
 [![Dependencies](https://david-dm.org/Borewit/audio-tag-analyzer.svg)](https://david-dm.org/Borewit/audio-tag-analyzer)
 [![NSP Status](https://nodesecurity.io/orgs/borewit/projects/a88dd971-3a40-4396-8057-16afdb6a9ac4/badge)](https://nodesecurity.io/orgs/borewit/projects/a88dd971-3a40-4396-8057-16afdb6a9ac4)
