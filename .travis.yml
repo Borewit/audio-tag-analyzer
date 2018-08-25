@@ -4,6 +4,6 @@ node_js:
  - "9"
  - "10"
 install:
-- yarn install
+- yarn install --verbose
 script:
 - ng build --prod
