@@ -2,10 +2,15 @@
 <div class="container">
   <h1>Audio Tag Analyzer</h1>
 
+  <p>Powered by <a href="https://github.com/Borewit/music-metadata">music-metadata</a>.</p>
+
    <div class="center">
     <file-drop (onFileDrop)="dropped($event)"
                (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
-      <span>Drop audio files here</span>
+      <span>Drop your audio file(s) you wish to analyse here.<br/>
+        Note these files will <b>not</b> be uploaded anywhere.<br/>
+        Instead they will be processed by your local browser only.
+      </span>
     </file-drop>
     <div *ngFor="let upload of uploads">
 
