@@ -26,6 +26,10 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      # Check global installed NPM-modules
+      - run: npm list -g --depth=0
+
+      # Install dependencies
       - run: npm install
 
       - save_cache:
