@@ -7,7 +7,10 @@
 
 Project demonstrating [music-metadata-browser](https://github.com/Borewit/music-metadata-browser), the browser version of [music-metadata](https://github.com/Borewit/music-metadata).
 Drag and drop any audio file and it extract ans list the music metadata found.
-A live version of the latest build can be found [here](https://audio-tag-analyzer.netlify.com/).
+
+## Live version
+
+###[Show me](https://audio-tag-analyzer.netlify.com/)
 
 ## Development server
 
