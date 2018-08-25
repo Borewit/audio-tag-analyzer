@@ -29,6 +29,9 @@ jobs:
       # Check global installed NPM-modules
       - run: npm list -g --depth=0
 
+      # Update yarn
+      - run: npm install yarn -g
+
       # Install dependencies
       - run: yarn install
 
