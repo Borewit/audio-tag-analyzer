@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-
-import { FileDropModule } from 'ngx-file-drop';
+import { DragAndDropBoxComponent } from './drag-and-drop-box/drag-and-drop-box.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DragAndDropBoxComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    FileDropModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
