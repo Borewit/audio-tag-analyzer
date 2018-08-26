@@ -59,7 +59,7 @@ export const commonLabels: TagLabel[] =
     }, {
     key: 'titlesort',
     label: 'Track title, formatted for alphabetic ordering'
-    }, {
+  }, {
     key: 'track',
     label: 'Track number',
     toText: v => v.of ? `${v.no} / ${v.of}` : `${v.no}`
@@ -96,7 +96,8 @@ export const commonLabels: TagLabel[] =
     label: 'Original release date'
   }, {
     key: 'originalyear',
-    label: 'Original release year'
+    label: 'Original release year',
+  }, {
     key: 'media',
     label: 'Release Format'
   }, {
@@ -191,7 +192,6 @@ export const commonLabels: TagLabel[] =
   }, {
     key: 'mood',
     label: 'Keywords to reflect the mood of the audio'
-  }, {
   }, {
     key: 'show',
     label: 'TV show title'
@@ -317,15 +317,15 @@ export const commonLabels: TagLabel[] =
   }, {
     key: 'discogs_artist_id',
     label: 'Discogs artist ID',
-    valueRef: (v) =>'https://www.discogs.com/artist/' + v
+    valueRef: (v) => 'https://www.discogs.com/artist/' + v
   }, {
     key: 'discogs_label_id',
     label: 'Discogs label ID',
-    valueRef: (v) =>'https://www.discogs.com/label/' + v
+    valueRef: (v) => 'https://www.discogs.com/label/' + v
   }, {
     key: 'discogs_master_release_id',
     label: 'Discogs master release ID',
-    valueRef: (v) =>'https://www.discogs.com/master/' + v
+    valueRef: (v) => 'https://www.discogs.com/master/' + v
   }, {
     key: 'discogs_votes',
     label: 'Discogs votes'
@@ -335,7 +335,7 @@ export const commonLabels: TagLabel[] =
   }, {
     key: 'discogs_release_id',
     label: 'Discogs release identifier',
-    valueRef: (v) =>'https://www.discogs.com/release/' + v
+    valueRef: (v) => 'https://www.discogs.com/release/' + v
   }, {
     key: 'website',
     label: 'URL of website'
