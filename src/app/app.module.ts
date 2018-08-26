@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DragAndDropBoxComponent } from './drag-and-drop-box/drag-and-drop-box.component';
+import { BytesPipe } from 'angular-pipes';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DragAndDropBoxComponent
+    DragAndDropBoxComponent,
+    BytesPipe
   ],
   imports: [
     BrowserModule,
