@@ -1,12 +1,16 @@
+[![CircleCI](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master.svg?style=shield)](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master)
 [![Build Status](https://travis-ci.org/Borewit/audio-tag-analyzer.svg?branch=master)](https://travis-ci.org/Borewit/audio-tag-analyzer)
 [![Dependencies](https://david-dm.org/Borewit/audio-tag-analyzer.svg)](https://david-dm.org/Borewit/audio-tag-analyzer)
 [![NSP Status](https://nodesecurity.io/orgs/borewit/projects/a88dd971-3a40-4396-8057-16afdb6a9ac4/badge)](https://nodesecurity.io/orgs/borewit/projects/a88dd971-3a40-4396-8057-16afdb6a9ac4)
 
 # Audio Tag Analyzer
 
-Project demonstrating [music-metadata](https://github.com/Borewit/music-metadata-browser).
+Project demonstrating [music-metadata-browser](https://github.com/Borewit/music-metadata-browser), the browser version of [music-metadata](https://github.com/Borewit/music-metadata).
 Drag and drop any audio file and it extract ans list the music metadata found.
-A live version of the latest build can be found [here](https://audio-tag-analyzer.netlify.com/).
+
+## Live version
+
+### [:rocket: Show me](https://audio-tag-analyzer.netlify.com/)
 
 ## Development server
 

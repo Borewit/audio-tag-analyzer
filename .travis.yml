@@ -4,6 +4,7 @@ node_js:
  - "9"
  - "10"
 install:
+- npm install -g yarn @angular/cli
 - yarn install
 script:
 - ng build --prod
