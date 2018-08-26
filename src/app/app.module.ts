@@ -10,13 +10,13 @@ import { BytesPipe } from 'angular-pipes';
 @NgModule({
   declarations: [
     AppComponent,
-    DragAndDropBoxComponent,
-    BytesPipe
+    DragAndDropBoxComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BytesPipe
   ],
   providers: [],
   bootstrap: [AppComponent]
