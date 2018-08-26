@@ -33,7 +33,7 @@
         </tr>
         <tr>
           <td>Size</td>
-          <td>{{ upload.file.size }}</td>
+          <td>{{ upload.file.size | bytes}}</td>
         </tr>
         <tr>
           <td>Last modified</td>
@@ -41,12 +41,18 @@
         </tr>
       </table>
 
-      <div *ngIf="!upload.metadata" class="alert alert-info">
+      <div *ngIf="!upload.metadata && !upload.parseError" class="alert alert-info">
         Parsing...
       </div>
 
-      <div *ngIf="upload.parseError" class="alert alert-severe">
-        {{ upload.parseError.message }}
+      <div *ngIf="upload.parseError" class="alert alert-danger">
+        <p>Failed to parse <i>{{ upload.file.name }}</i>.
+        <p>Error message: {{ upload.parseError }}.</p>
+        <p>If you believe this is a bug, please <a target="_blank"
+                                                   href="https://github.com/Borewit/audio-tag-analyzer/issues">open an
+          issue here</a>.<br/>
+          Don't forget to attach the audio file which could not be parsed.
+        </p>
       </div>
 
       <div *ngIf="upload.metadata">
