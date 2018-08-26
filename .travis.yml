@@ -7,4 +7,5 @@ install:
 - npm install -g yarn @angular/cli
 - yarn install
 script:
+- ng lint
 - ng build --prod

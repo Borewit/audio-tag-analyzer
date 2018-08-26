@@ -1,7 +1,7 @@
-import {Component, ElementRef, AfterContentInit, NgZone, EventEmitter, Output} from '@angular/core';
+import {Component, ElementRef, AfterContentInit, OnDestroy, NgZone, EventEmitter, Output} from '@angular/core';
 
-import * as dragDrop from 'drag-drop'
 import * as createDebug from 'debug';
+import {DragDrop} from './drag-drop';
 
 const debug = createDebug('audio-tag-analyzer:drag-and-drop');
 
@@ -18,22 +18,24 @@ interface IFileDropEvent {
   template: '<div class="jumbotron"><ng-content></ng-content></div>',
   styleUrls: ['./drag-and-drop-box.component.css']
 })
-export class DragAndDropBoxComponent implements AfterContentInit {
+export class DragAndDropBoxComponent implements AfterContentInit, OnDestroy {
+
+  private dragAndDrop: DragDrop;
 
   constructor(private elementRef: ElementRef, private zone: NgZone) {
   }
 
   @Output()
-  public onFilesDrop: EventEmitter<File[]> = new EventEmitter<File[]>();
+  public emitFilesDrop: EventEmitter<File[]> = new EventEmitter<File[]>();
 
   @Output()
-  public onFilesEnter: EventEmitter<File[]> = new EventEmitter<File[]>();
+  public emitFilesEnter: EventEmitter<File[]> = new EventEmitter<File[]>();
 
   @Output()
-  public onFilesOver: EventEmitter<File[]> = new EventEmitter<File[]>();
+  public emitFilesOver: EventEmitter<File[]> = new EventEmitter<File[]>();
 
   @Output()
-  public onFilesLeave: EventEmitter<File[]> = new EventEmitter<File[]>();
+  public emitFilesLeave: EventEmitter<File[]> = new EventEmitter<File[]>();
 
   private emitFileEvent(emitter: EventEmitter<File[]>, type: string, files: File[]) {
     debug(`drag/drop:${type} event`);
@@ -45,21 +47,24 @@ export class DragAndDropBoxComponent implements AfterContentInit {
   ngAfterContentInit() {
     const e = this.elementRef.nativeElement;
     const divDrop = e.childNodes[0];
-    dragDrop(divDrop, {
+    this.dragAndDrop = new DragDrop(divDrop, {
       onDrop: (files) => {
-        this.emitFileEvent(this.onFilesDrop, 'drop', files);
+        this.emitFileEvent(this.emitFilesDrop, 'drop', files);
       },
       onDragEnter: (files) => {
-        this.emitFileEvent(this.onFilesEnter, 'enter', files);
+        this.emitFileEvent(this.emitFilesEnter, 'enter', files);
       },
       /*
       onDragOver: (files) => {
         this.emitFileEvent(this.onFileOver, 'over', files);
       },*/
       onDragLeave: (files) => {
-        this.emitFileEvent(this.onFilesOver, 'leave', files);
+        this.emitFileEvent(this.emitFilesOver, 'leave', files);
       }
-    })
+    });
   }
 
+  ngOnDestroy() {
+    this.dragAndDrop.remove();
+  }
 }

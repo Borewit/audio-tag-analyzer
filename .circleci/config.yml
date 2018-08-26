@@ -35,6 +35,9 @@ jobs:
       # Install dependencies
       - run: yarn install
 
+      # Check code style
+      - run: ng lint
+
       - save_cache:
           paths:
             - node_modules

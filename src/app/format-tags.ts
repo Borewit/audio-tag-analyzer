@@ -1,11 +1,22 @@
 import {IAudioMetadata} from 'music-metadata-browser';
 
 export interface TagLabel {
-  key: string,
-  label: string,
-  toText?: (md: IAudioMetadata) => string,
-  keyRef?: string,
-  valueRef?: (value: string) => string,
+  /**
+   * API tag property name
+   */
+  key: string;
+  /**
+   * Human readable label describing key
+   */
+  label: string;
+  /**
+   * Convert tag label to human readable string
+   * @param v {any} Tag value
+   * @returns {string} Human readable string
+   */
+  toText?: (value: any) => string;
+  keyRef?: string;
+  valueRef?: (value: string) => string;
 }
 
 export const formatLabels: TagLabel[] =

@@ -12,9 +12,9 @@
     href="https://github.com/Borewit/audio-tag-analyzer">GitHub</a>.</p>
 
   <div class="center">
-    <app-drag-and-drop-box (onFilesDrop)="handleFilesDropped($event)"
-                           (onFilesEnter)="handleFilesEnter($event)"
-                           (onFilesLeave)="handleFilesLeave($event)">
+    <app-drag-and-drop-box (emitFilesDrop)="handleFilesDropped($event)"
+                           (emitFilesEnter)="handleFilesEnter($event)"
+                           (emitFilesLeave)="handleFilesLeave($event)">
       <h3>Drop your audio files here</h3>
       <hr class="my-4">
       <p>Files dropped files will stay within your local browser and not uploaded anywhere else.</p>
@@ -58,7 +58,9 @@
       <div *ngIf="upload.metadata">
         <div *ngIf="upload.metadata.common.picture">
           <h4>Embedded cover art</h4>
-          <div *ngFor="let picture of upload.metadata.common.picture">
+          <div *ngFor="let picture of upload.metadata.common.picture" class="media">
+            <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
+            <div class="media-body">
             <table class="table">
               <tr>
                 <td>Format</td>
@@ -73,7 +75,7 @@
                 <td>{{ picture.description }}</td>
               </tr>
             </table>
-            <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
+            </div>
           </div>
         </div>
 

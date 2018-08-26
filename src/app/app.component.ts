@@ -4,31 +4,31 @@ import * as mm from 'music-metadata-browser';
 import fileReaderStream from 'filereader-stream';
 
 import * as createDebug from 'debug';
-import {commonLabels, formatLabels, TagLabel} from "./format-tags";
+import {commonLabels, formatLabels, TagLabel} from './format-tags';
 
 const debug = createDebug('audio-tag-analyzer:app');
 
 interface IValue {
-  text: string,
-  ref?: string
+  text: string;
+  ref?: string;
 }
 
-interface TagText {
-  key: string,
-  label: IValue
-  value: IValue[]
+interface ITagText {
+  key: string;
+  label: IValue;
+  value: IValue[];
 }
 
 interface IUpload {
-  file: File,
-  metadata?: mm.IAudioMetadata,
-  parseError?: Error
+  file: File;
+  metadata?: mm.IAudioMetadata;
+  parseError?: Error;
 }
 
 interface ITagList {
-  title: string,
-  key: string,
-  tags?: TagText[]
+  title: string;
+  key: string;
+  tags?: ITagText[];
 }
 
 @Component({
@@ -65,7 +65,7 @@ export class AppComponent {
     console.log(event);
   }
 
-  private prepareTags(labels: TagLabel[], tags: mm.ICommonTagsResult): TagText[] {
+  private prepareTags(labels: TagLabel[], tags: mm.ICommonTagsResult): ITagText[] {
     return labels.filter(label => tags.hasOwnProperty(label.key)).map(label => {
         const av = Array.isArray(tags[label.key]) ? tags[label.key] : [tags[label.key]];
         return {
