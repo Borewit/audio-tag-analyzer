@@ -101,8 +101,10 @@ export class AppComponent {
           return this.parseFiles(files);
         });
       }).catch(err => {
-        debug('Error:' + err.message);
-        upload.parseError = err;
+        return this.zone.run(() => {
+          debug('Error: ' + err.message);
+          upload.parseError = err.message;
+        });
       });
     }
   }
