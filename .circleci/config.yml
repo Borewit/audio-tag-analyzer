@@ -30,10 +30,7 @@ jobs:
       - run: npm list -g --depth=0
 
       # Update/install yarn & Angular
-      - run: sudo npm install -g yarn @angular/cli
-
-      # Avoid permission denied on yarn
-      - run: sleep 1
+      - run: sudo npm install -g yarn @angular/cli && sync && ls -l /usr/local/bin/yarn
 
       # Install dependencies
       - run: yarn install
