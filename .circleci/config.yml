@@ -35,7 +35,7 @@ jobs:
       - run: yarn install
 
       # Check code style
-      - run: ng lint
+      - run: yarn run lint
 
       - save_cache:
           paths:
@@ -43,4 +43,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # Build
-      - run: ng build --prod
+      - run: yarn build --prod
