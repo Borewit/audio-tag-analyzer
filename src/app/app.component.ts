@@ -2,8 +2,9 @@ import {Component, NgZone} from '@angular/core';
 import * as mm from 'music-metadata-browser';
 
 import fileReaderStream from 'filereader-stream';
-
+import http from 'stream-http';
 import * as createDebug from 'debug';
+
 import {commonLabels, formatLabels, TagLabel} from './format-tags';
 
 const debug = createDebug('audio-tag-analyzer:app');
@@ -19,8 +20,17 @@ interface ITagText {
   value: IValue[];
 }
 
-interface IUpload {
-  file: File;
+interface IUrlAsFile {
+  name: string;
+  type: string;
+}
+
+interface IFileAnalysis {
+  file: File | IUrlAsFile;
+  http?: {
+    url: string;
+    type: string;
+  };
   metadata?: mm.IAudioMetadata;
   parseError?: Error;
 }
@@ -39,7 +49,7 @@ interface ITagList {
 
 export class AppComponent {
 
-  public uploads: IUpload[];
+  public results: IFileAnalysis[];
 
   public tagLists: ITagList[] = [{
     title: 'Format',
@@ -52,17 +62,26 @@ export class AppComponent {
   constructor(private zone: NgZone) {
   }
 
-  public handleFilesDropped(files: File[]) {
-    this.uploads = []; // initialize results
+  public handleFilesDropped(files: File[], directories) {
+    this.results = []; // initialize results
     this.parseFiles(files);
+    debug('handleFilesDropped', {files, directories});
+  }
+
+  public handleTextDropped(text) {
+    this.results = []; // initialize results
+    if (text.indexOf('http') === 0) {
+      return this.parseUsingHttp(text);
+    } else {
+    }
   }
 
   public handleFilesEnter(event) {
-    console.log(event);
+    debug('handleFilesEnter', event);
   }
 
   public handleFilesLeave(event) {
-    console.log(event);
+    console.log('handleFilesLeave', event);
   }
 
   private prepareTags(labels: TagLabel[], tags: mm.ICommonTagsResult): ITagText[] {
@@ -82,31 +101,52 @@ export class AppComponent {
     );
   }
 
+  private parseUsingHttp(url: string): Promise<void> {
+    debug('Converting HTTP to stream using: ' + url);
+    return this.httpGeturl(url).then(stream => {
+      return this.parseStream({name: url, type: stream.headers['content-type']}, stream);
+    });
+  }
+
+  private httpGeturl(url: string): Promise<any> {
+    // Assume URL
+    return new Promise(resolve => {
+      http.get(url, stream => {
+        resolve(stream);
+      });
+    });
+  }
+
   private parseFiles(files: File[]): Promise<void> {
     const file: File = files.shift();
     if (file) {
-
-      const upload: IUpload = {
-        file
-      };
-      this.uploads.push(upload);
       debug('Start parsing file %s', file.name);
       const stream = fileReaderStream(file);
-      return mm.parseStream(stream, file.type).then(metadata => {
-        return this.zone.run(() => {
-          debug('Completed parsing of %s:', file.name, metadata);
-          upload.metadata = metadata;
-          this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
-          this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
-          return this.parseFiles(files);
-        });
-      }).catch(err => {
-        return this.zone.run(() => {
-          debug('Error: ' + err.message);
-          upload.parseError = err.message;
-        });
+      return this.parseStream(file, stream).then(() => {
+        return this.parseFiles(files);
       });
     }
+  }
+
+  private parseStream(file: File | IUrlAsFile, stream): Promise<void> {
+    debug('Parsing %s of type %s', file.name, file.type);
+    const result: IFileAnalysis = {
+      file
+    };
+    this.results.push(result);
+    return mm.parseStream(stream, file.type).then(metadata => {
+      return this.zone.run(() => {
+        debug('Completed parsing of %s:', file.name, metadata);
+        result.metadata = metadata;
+        this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
+        this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
+      });
+    }).catch(err => {
+      return this.zone.run(() => {
+        debug('Error: ' + err.message);
+        result.parseError = err.message;
+      });
+    });
   }
 
 }
