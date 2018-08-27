@@ -62,10 +62,10 @@ export class AppComponent {
   constructor(private zone: NgZone) {
   }
 
-  public handleFilesDropped(files: File[], directories) {
+  public handleFilesDropped(files: File[]) {
     this.results = []; // initialize results
     this.parseFiles(files);
-    debug('handleFilesDropped', {files, directories});
+    debug('handleFilesDropped', {files});
   }
 
   public handleTextDropped(text) {
