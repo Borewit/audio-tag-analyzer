@@ -12,14 +12,15 @@
     href="https://github.com/Borewit/audio-tag-analyzer">GitHub</a>.</p>
 
   <div class="center">
-    <app-drag-and-drop-box (emitFilesDrop)="handleFilesDropped($event)"
-                           (emitFilesEnter)="handleFilesEnter($event)"
-                           (emitFilesLeave)="handleFilesLeave($event)">
+    <app-drag-and-drop-box (emitDropFiles)="handleFilesDropped($event)"
+                           (emitEnterFiles)="handleFilesEnter($event)"
+                           (emitLeaveFiles)="handleFilesLeave($event)"
+                           (emitDropText)="handleTextDropped($event)">
       <h3>Drop your audio files here</h3>
       <hr class="my-4">
       <p>Dropped files will stay within your local browser. They will not be uploaded anywhere else.</p>
     </app-drag-and-drop-box>
-    <div *ngFor="let upload of uploads">
+    <div *ngFor="let upload of results">
 
       <h4>File information</h4>
       <table class="table">

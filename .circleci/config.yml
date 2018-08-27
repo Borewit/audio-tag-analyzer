@@ -13,8 +13,10 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
-
     working_directory: ~/repo
+
+    environment:
+          YARN_VERSION: 1.9.4
 
     steps:
       - checkout
@@ -29,14 +31,11 @@ jobs:
       # Check global installed NPM-modules
       - run: npm list -g --depth=0
 
-      # Update/install yarn & Angular
-      - run: sudo npm install -g yarn @angular/cli && sync && ls -l /usr/local/lib/node_modules/yarn/bin/yarn.js
-
       # Install dependencies
       - run: yarn install
 
       # Check code style
-      - run: ng lint
+      - run: yarn run lint
 
       - save_cache:
           paths:
@@ -44,4 +43,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # Build
-      - run: ng build --prod
+      - run: yarn build --prod
