@@ -108,8 +108,8 @@ export class AppComponent {
       return {
         type,
         tags: tags[type]
-      }
-    })
+      };
+    });
   }
 
   private parseUsingHttp(url: string): Promise<void> {
