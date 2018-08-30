@@ -3893,9 +3893,9 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.1.0.tgz#18fecc3cc2b13b143c6722421a3ac3491928e9c4"
+music-metadata-browser@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.0.4.tgz#f9b9df82bab253112553aff2d9f97548db515cde"
 
 nan@^2.10.0, nan@^2.9.2:
   version "2.10.0"
