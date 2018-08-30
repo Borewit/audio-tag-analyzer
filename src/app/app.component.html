@@ -62,27 +62,27 @@
           <div *ngFor="let picture of upload.metadata.common.picture" class="media">
             <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
             <div class="media-body">
-            <table class="table">
-              <tr>
-                <td>Format</td>
-                <td>{{ picture.format }}</td>
-              </tr>
-              <tr>
-                <td>Type</td>
-                <td>{{ picture.type }}</td>
-              </tr>
-              <tr>
-                <td>Description</td>
-                <td>{{ picture.description }}</td>
-              </tr>
-            </table>
+              <table class="table">
+                <tr>
+                  <td>Format</td>
+                  <td>{{ picture.format }}</td>
+                </tr>
+                <tr>
+                  <td>Type</td>
+                  <td>{{ picture.type }}</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>{{ picture.description }}</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
 
         <div *ngFor="let tagList of tagLists">
 
-          <h4>{{ tagList.title }}</h4>
+          <h4>Native tags: <i>{{ tagList.title }}</i></h4>
 
           <table class="table">
             <tr>
@@ -94,13 +94,30 @@
               <td><a *ngIf="tag.label.ref" target="_blank" [href]="tag.label.ref">{{tag.label.text}}</a><span
                 *ngIf="!tag.label.ref">{{tag.label.text}}</span></td>
               <td>
-                <div *ngFor="let v of tag.value; let first = first;">
+                <span *ngFor="let v of tag.value; let first = first;">
                   <span *ngIf="!first">, </span>
                   <a *ngIf="v.ref" target="_blank" [href]="v.ref">{{v.text}}</a>
                   <span *ngIf="!v.ref">{{v.text}}</span>
-                </div>
+                </span>
               </td>
               <td>{{tag.key}}</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div *ngFor="let type of nativeTags">
+
+          <h4>{{ type.type }}</h4>
+
+          <table class="table">
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+            </tr>
+            <tr *ngFor="let tag of type.tags">
+              <td>{{tag.id }}</td>
+              <td>{{ tag.value }}</td>
             </tr>
           </table>
 

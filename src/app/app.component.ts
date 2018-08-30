@@ -59,6 +59,8 @@ export class AppComponent {
     key: 'common'
   }];
 
+  public nativeTags: {type: string, tags: {id: string, value: string}[]}[] = [];
+
   constructor(private zone: NgZone) {
   }
 
@@ -84,7 +86,7 @@ export class AppComponent {
     console.log('handleFilesLeave', event);
   }
 
-  private prepareTags(labels: TagLabel[], tags: mm.ICommonTagsResult): ITagText[] {
+  private prepareTags(labels: TagLabel[], tags: mm.ICommonTagsResult | mm.IFormat): ITagText[] {
     return labels.filter(label => tags.hasOwnProperty(label.key)).map(label => {
         const av = Array.isArray(tags[label.key]) ? tags[label.key] : [tags[label.key]];
         return {
@@ -99,6 +101,15 @@ export class AppComponent {
         };
       }
     );
+  }
+
+  private prepareNativeTags(tags: mm.INativeTags): {type: string, tags: {id: string, value: string}[]}[] {
+    return Object.keys(tags).map(type => {
+      return {
+        type,
+        tags: tags[type]
+      }
+    })
   }
 
   private parseUsingHttp(url: string): Promise<void> {
@@ -134,12 +145,13 @@ export class AppComponent {
       file
     };
     this.results.push(result);
-    return mm.parseStream(stream, file.type).then(metadata => {
+    return mm.parseStream(stream, file.type, {native: true}).then(metadata => {
       return this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;
         this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
         this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
+        this.nativeTags = this.prepareNativeTags(metadata.native);
       });
     }).catch(err => {
       return this.zone.run(() => {
