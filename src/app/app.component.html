@@ -22,7 +22,7 @@
     </app-drag-and-drop-box>
     <div *ngFor="let upload of results">
 
-      <h4>File information</h4>
+      <h2>File information</h2>
       <table class="table">
         <tr>
           <td>Name</td>
@@ -58,7 +58,7 @@
 
       <div *ngIf="upload.metadata">
         <div *ngIf="upload.metadata.common.picture">
-          <h4>Embedded cover art</h4>
+          <h3>Embedded cover art</h3>
           <div *ngFor="let picture of upload.metadata.common.picture" class="media">
             <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
             <div class="media-body">
@@ -82,7 +82,7 @@
 
         <div *ngFor="let tagList of tagLists">
 
-          <h4>Native tags: <i>{{ tagList.title }}</i></h4>
+          <h2>{{ tagList.title }}</h2>
 
           <table class="table">
             <tr>
@@ -106,9 +106,11 @@
 
         </div>
 
+        <h2>Native tags</h2>
+
         <div *ngFor="let type of nativeTags">
 
-          <h4>{{ type.type }}</h4>
+          <h3>{{ type.type }}</h3>
 
           <table class="table">
             <tr>
