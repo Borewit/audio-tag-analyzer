@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "angular-pipes": "^8.0.0",
     "bootstrap": "4",
-    "buffer": "^5.2.0",
+    "buffer": "^5.2.1",
     "core-js": "^2.5.4",
     "debug": "^3.1.0",
     "drag-drop": "^4.2.0",
