@@ -1831,6 +1831,10 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+emitter-component@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/emitter-component/-/emitter-component-1.1.1.tgz#065e2dbed6959bf470679edabeaf7981d1003ab6"
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
@@ -1944,7 +1948,7 @@ es6-iterator@~2.0.3:
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
 
-es6-promise@^4.0.3:
+es6-promise@^4.0.3, es6-promise@^4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
 
@@ -5544,6 +5548,12 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
 
+stream@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/stream/-/stream-0.0.2.tgz#7f5363f057f6592c5595f00bc80a27f5cec1f0ef"
+  dependencies:
+    emitter-component "^1.1.1"
+
 streamroller@0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/streamroller/-/streamroller-0.7.0.tgz#a1d1b7cf83d39afb0d63049a5acbf93493bdf64b"
@@ -5613,6 +5623,15 @@ strip-indent@^1.0.1:
 strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
+
+strtok3@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-1.5.4.tgz#b96590a36a78c9acabbf5590d779b5cabf809efc"
+  dependencies:
+    debug "^3.1.0"
+    es6-promise "^4.2.4"
+    then-read-stream "^1.2.1"
+    token-types "^0.10.0"
 
 style-loader@^0.21.0:
   version "0.21.0"
@@ -5684,6 +5703,12 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+then-read-stream@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/then-read-stream/-/then-read-stream-1.2.1.tgz#9baddcb8a4ebc8a6fb36436985d24c36f7908829"
+  dependencies:
+    es6-promise "^4.2.4"
+
 through2@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
@@ -5750,6 +5775,10 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+token-types@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/token-types/-/token-types-0.10.0.tgz#b45ac19ede381ff58fc818d760f7113a6158693b"
 
 toposort@^1.0.0:
   version "1.0.7"
