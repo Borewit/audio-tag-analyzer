@@ -114,12 +114,12 @@ export class AppComponent {
 
   private parseUsingHttp(url: string): Promise<void> {
     debug('Converting HTTP to stream using: ' + url);
-    return this.httpGeturl(url).then(stream => {
+    return this.httpGetByUrl(url).then(stream => {
       return this.parseStream({name: url, type: stream.headers['content-type']}, stream);
     });
   }
 
-  private httpGeturl(url: string): Promise<any> {
+  private httpGetByUrl(url: string): Promise<any> {
     // Assume URL
     return new Promise(resolve => {
       http.get(url, stream => {
@@ -146,7 +146,7 @@ export class AppComponent {
     };
     this.results.push(result);
     return mm.parseStream(stream, file.type, {native: true}).then(metadata => {
-      return this.zone.run(() => {
+      this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;
         this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
@@ -154,11 +154,11 @@ export class AppComponent {
         this.nativeTags = this.prepareNativeTags(metadata.native);
       });
     }).catch(err => {
-      return this.zone.run(() => {
+      this.zone.run<void>(() => {
         debug('Error: ' + err.message);
         result.parseError = err.message;
       });
-    });
+    }) as any;
   }
 
 }
