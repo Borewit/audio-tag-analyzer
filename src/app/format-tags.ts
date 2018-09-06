@@ -1,5 +1,3 @@
-import {IAudioMetadata} from 'music-metadata-browser';
-
 export interface TagLabel {
   /**
    * API tag property name
@@ -19,12 +17,11 @@ export interface TagLabel {
   valueRef?: (value: string) => string;
 }
 
-export const formatLabels: TagLabel[] =
-  [
-    {
-      key: 'dataformat',
-      label: 'Data format'
-    }, {
+export const formatLabels: TagLabel[] = [
+  {
+    key: 'dataformat',
+    label: 'Data format'
+  }, {
     key: 'tagTypes',
     label: 'Tag header type(s)'
   }, {
@@ -58,7 +55,7 @@ export const formatLabels: TagLabel[] =
     key: 'audioMD5',
     label: 'Audio MD5 hash'
   }
-  ];
+];
 
 const mbBaseUrl = 'https://musicbrainz.org';
 
@@ -71,13 +68,32 @@ export const commonLabels: TagLabel[] =
     key: 'titlesort',
     label: 'Track title, formatted for alphabetic ordering'
   }, {
+    key: 'subtitle',
+    label: 'Contains the subtitle of the content'
+  }, {
+    key: 'work',
+    label: 'The canonical title of the work',
+    keyRef: 'https://musicbrainz.org/doc/Work'
+  }, {
+    key: 'grouping',
+    label: 'Content group description.'
+  }, {
     key: 'track',
     label: 'Track number',
     toText: v => v.of ? `${v.no} / ${v.of}` : `${v.no}`
   }, {
+    key: 'totaltracks',
+    label: 'The total number of tracks'
+  }, {
     key: 'disk',
     label: 'Disk or media number',
     toText: v => v.of ? `${v.no} / ${v.of}` : `${v.no}`
+  }, {
+    key: 'totaldiscs',
+    label: 'The total number of discs'
+  }, {
+    key: 'discsubtitle',
+    label: 'The Media Title given to a specific disc'
   }, {
     key: 'artist',
     label: 'Artist'
@@ -88,56 +104,6 @@ export const commonLabels: TagLabel[] =
     key: 'albumartist',
     label: 'Album artist'
   }, {
-    key: 'year',
-    label: 'Release year'
-  }, {
-    key: 'album',
-    label: 'Album'
-  }, {
-    key: 'albumsort',
-    label: 'Album title, formatted for alphabetic ordering'
-  }, {
-    key: 'originalalbum',
-    label: 'Original release title'
-  }, {
-    key: 'date',
-    label: 'Release date'
-  }, {
-    key: 'originaldate',
-    label: 'Original release date'
-  }, {
-    key: 'originalyear',
-    label: 'Original release year',
-  }, {
-    key: 'media',
-    label: 'Release Format'
-  }, {
-    key: 'label',
-    label: 'Release label name(s)'
-  }, {
-    key: 'catalognumber',
-    label: 'Release catalog number(s)',
-    keyRef: 'https://musicbrainz.org/doc/Release/Catalog_Number'
-  }, {
-    key: 'comment',
-    label: 'Comments'
-  }, {
-    key: 'genre',
-    label: 'Genres'
-  }/*, {
-    key: 'picture',
-    label: 'Embedded cover art'
-  }*/, {
-    key: 'composer',
-    label: 'Composer'
-  }, {
-    key: 'lyrics',
-    label: 'Lyricist'
-  }, {
-    key: 'work',
-    label: 'The canonical title of the work',
-    keyRef: 'https://musicbrainz.org/doc/Work'
-  }, {
     key: 'artistsort',
     label: 'Track artist sort name'
   }, {
@@ -146,6 +112,9 @@ export const commonLabels: TagLabel[] =
   }, {
     key: 'originalartist',
     label: 'Original track artists.'
+  }, {
+    key: 'composer',
+    label: 'Composer'
   }, {
     key: 'composersort',
     label: 'Composer, formatted for alphabetic ordering'
@@ -177,32 +146,69 @@ export const commonLabels: TagLabel[] =
     key: 'mixer',
     label: 'Mixed by'
   }, {
-    key: 'grouping',
-    label: 'Content group description.'
+    key: 'technician',
+    label: 'Technician who digitized subject'
   }, {
-    key: 'subtitle',
-    label: 'Contains the subtitle of the content'
+    key: 'performer:instrument',
+    label: 'Performer relationship types, instrument can also be vocals.'
   }, {
-    key: 'discsubtitle',
-    label: 'The Media Title given to a specific disc'
+    key: 'year',
+    label: 'Release year'
   }, {
-    key: 'totaltracks',
-    label: 'The total number of tracks'
+    key: 'album',
+    label: 'Album'
   }, {
-    key: 'totaldiscs',
-    label: 'The total number of discs'
+    key: 'albumsort',
+    label: 'Album title, formatted for alphabetic ordering'
+  }, {
+    key: 'originalalbum',
+    label: 'Original release title'
   }, {
     key: 'compilation',
     label: 'Is part of compilation'
+  }, {
+    key: 'date',
+    label: 'Release date'
+  }, {
+    key: 'originaldate',
+    label: 'Original release date'
+  }, {
+    key: 'originalyear',
+    label: 'Original release year',
+  }, {
+    key: 'media',
+    label: 'Release Format'
+  }, {
+    key: 'label',
+    label: 'Release label name(s)'
+  }, {
+    key: 'catalognumber',
+    label: 'Release catalog number(s)',
+    keyRef: 'https://musicbrainz.org/doc/Release/Catalog_Number'
+  }, {
+    key: 'genre',
+    label: 'Genres'
+  }, {
+    key: 'mood',
+    label: 'Keywords to reflect the mood of the audio'
+  }, {
+    key: 'comment',
+    label: 'Comments'
+  }, {
+    key: 'notes',
+    label: 'Notes'
+  }, {
+    key: 'lyrics',
+    label: 'Lyricist'
+  }, {
+    key: 'key',
+    label: 'Initial key'
   }, {
     key: 'rating',
     label: 'Object holding rating score [0..1]'
   }, {
     key: 'bpm',
     label: 'Beats Per Minute (BPM)'
-  }, {
-    key: 'mood',
-    label: 'Keywords to reflect the mood of the audio'
   }, {
     key: 'show',
     label: 'TV show title'
@@ -351,28 +357,19 @@ export const commonLabels: TagLabel[] =
     key: 'website',
     label: 'URL of website'
   }, {
-    key: 'performer:instrument',
-    label: 'Performer relationship types, instrument can also be vocals.'
-  }, {
     key: 'averageLevel',
     label: 'Average gain level.'
   }, {
     key: 'peakLevel',
     label: 'Peak gain level.'
   }, {
-    key: 'notes',
-    label: 'Notes'
-  }, {
-    key: 'key',
-    label: 'Initial key'
-  }, {
     key: 'replaygain_track_peak',
     label: '_ToDo_: difference with peakLevel?'
   }, {
     key: 'replaygain_track_gain',
-    label: '_ToDo_: difference with averageLevel'
-  }, {
-    key: 'technician',
-    label: 'Technician who digitized subject'
-  }
+    label: 'Replay track gain'
+  }/*, {
+    key: 'picture',
+    label: 'Embedded cover art'
+  }*/
   ];
