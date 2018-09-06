@@ -364,7 +364,7 @@ export const commonLabels: TagLabel[] =
     label: 'Peak gain level.'
   }, {
     key: 'replaygain_track_peak',
-    label: '_ToDo_: difference with peakLevel?'
+    label: 'Replay track peak'
   }, {
     key: 'replaygain_track_gain',
     label: 'Replay track gain'
