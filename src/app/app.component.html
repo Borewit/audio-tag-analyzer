@@ -1,6 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
 
+  <div class="float-right mr-3">
+    <img [src]="logo" *ngFor="let logo of logos" class="img-fluid" style="height:50px;margin: 5px"/>
+  </div>
+
   <div class="media">
     <img class="mr-3" src="assets/icon/audio-tag-analyzer.svg" alt="" width="72" height="72">
     <div class="media-body">
@@ -20,6 +24,7 @@
       <hr class="my-4">
       <p>Dropped files will stay within your local browser. They will not be uploaded anywhere else.</p>
     </app-drag-and-drop-box>
+
     <div *ngFor="let upload of results">
 
       <h2>File information</h2>
