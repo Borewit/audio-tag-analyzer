@@ -7,7 +7,7 @@ import * as createDebug from 'debug';
 
 import {commonLabels, formatLabels, TagLabel} from './format-tags';
 
-const debug = createDebug('audio-tag-analyzer:app');
+const debug = createDebug('audio-tag-analyzer');
 
 interface IValue {
   text: string;
@@ -42,12 +42,12 @@ interface ITagList {
 }
 
 const logos = [
-  "https://upload.wikimedia.org/wikipedia/commons/e/e0/Flac_logo_vector.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/e/ea/Mp3.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg",
-  "https://upload.wikimedia.org/wikipedia/en/a/ac/XiphophorusLogoSVG.svg",
-  "https://www.shareicon.net/download/2015/12/08/684232_file.svg",
-  "http://www.wavpack.com/wavpacklogo.svg"
+  'https://upload.wikimedia.org/wikipedia/commons/e/e0/Flac_logo_vector.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/e/ea/Mp3.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg',
+  'https://upload.wikimedia.org/wikipedia/en/a/ac/XiphophorusLogoSVG.svg',
+  'https://www.shareicon.net/download/2015/12/08/684232_file.svg',
+  'http://www.wavpack.com/wavpacklogo.svg'
 ];
 
 @Component({
@@ -96,7 +96,7 @@ export class AppComponent {
     console.log('handleFilesLeave', event);
   }
 
-  private prepareTags(labels: TagLabel[], tags: mm.ICommonTagsResult | mm.IFormat): ITagText[] {
+  private prepareTags(labels: TagLabel[], tags): ITagText[] {
     return labels.filter(label => tags.hasOwnProperty(label.key)).map(label => {
         const av = Array.isArray(tags[label.key]) ? tags[label.key] : [tags[label.key]];
         return {
@@ -113,7 +113,7 @@ export class AppComponent {
     );
   }
 
-  private prepareNativeTags(tags: mm.INativeTags): {type: string, tags: {id: string, value: string}[]}[] {
+  private prepareNativeTags(tags): {type: string, tags: {id: string, value: string}[]}[] {
     return Object.keys(tags).map(type => {
       return {
         type,
@@ -125,7 +125,7 @@ export class AppComponent {
   private parseUsingHttp(url: string): Promise<void> {
     debug('Converting HTTP to stream using: ' + url);
     return this.httpGetByUrl(url).then(stream => {
-      return this.parseStream({name: url, type: stream.headers['content-type']}, stream);
+      // ToDo return this.parseStream({name: url, type: stream.headers['content-type']}, stream);
     });
   }
 
@@ -149,13 +149,14 @@ export class AppComponent {
     }
   }
 
-  private parseStream(file: File | IUrlAsFile, stream): Promise<void> {
+  private parseStream(file: File, stream): Promise<void> {
     debug('Parsing %s of type %s', file.name, file.type);
     const result: IFileAnalysis = {
       file
     };
     this.results.push(result);
-    return mm.parseStream(stream, file.type, {native: true}).then(metadata => {
+    //return mm.parseStream(stream, file.type, {native: true}).then(metadata => {
+    return mm.parseFile(file, {native: true}).then(metadata => {
       this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;

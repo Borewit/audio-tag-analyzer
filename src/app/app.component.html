@@ -64,7 +64,7 @@
       <div *ngIf="upload.metadata">
         <div *ngIf="upload.metadata.common.picture">
           <h3>Embedded cover art</h3>
-          <div *ngFor="let picture of upload.metadata.common.picture" class="media">
+          <div *ngFor="let picture of upload.metadata.common.picture" class="media col-md-8">
             <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
             <div class="media-body">
               <table class="table">

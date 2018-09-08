@@ -16,7 +16,7 @@ import { NgMathPipesModule } from 'angular-pipes';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    NgMathPipesModule
+    NgMathPipesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

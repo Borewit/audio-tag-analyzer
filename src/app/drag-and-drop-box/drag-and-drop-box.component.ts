@@ -5,14 +5,6 @@ import * as dragDrop from 'drag-drop';
 
 const debug = createDebug('audio-tag-analyzer:drag-and-drop');
 
-/*
-interface IFileDropEvent {
-  files: File[];
-  pos;
-  fileList;
-  directories: any[];
-}*/
-
 @Component({
   selector: 'app-drag-and-drop-box',
   template: '<div class="jumbotron"><ng-content></ng-content></div>',
