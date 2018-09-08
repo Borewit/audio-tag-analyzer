@@ -42,12 +42,12 @@ interface ITagList {
 }
 
 const logos = [
-  "https://upload.wikimedia.org/wikipedia/commons/e/e0/Flac_logo_vector.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/e/ea/Mp3.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg",
-  "https://upload.wikimedia.org/wikipedia/en/a/ac/XiphophorusLogoSVG.svg",
-  "https://www.shareicon.net/download/2015/12/08/684232_file.svg",
-  "http://www.wavpack.com/wavpacklogo.svg"
+  'https://upload.wikimedia.org/wikipedia/commons/e/e0/Flac_logo_vector.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/e/ea/Mp3.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg',
+  'https://upload.wikimedia.org/wikipedia/en/a/ac/XiphophorusLogoSVG.svg',
+  'https://www.shareicon.net/download/2015/12/08/684232_file.svg',
+  'http://www.wavpack.com/wavpacklogo.svg'
 ];
 
 @Component({
