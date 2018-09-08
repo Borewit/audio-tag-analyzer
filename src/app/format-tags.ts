@@ -59,12 +59,11 @@ export const formatLabels: TagLabel[] = [
 
 const mbBaseUrl = 'https://musicbrainz.org';
 
-export const commonLabels: TagLabel[] =
-  [
-    {
-      key: 'title',
-      label: 'Track title'
-    }, {
+export const commonLabels: TagLabel[] = [
+  {
+    key: 'title',
+    label: 'Track title'
+  }, {
     key: 'titlesort',
     label: 'Track title, formatted for alphabetic ordering'
   }, {
@@ -368,8 +367,29 @@ export const commonLabels: TagLabel[] =
   }, {
     key: 'replaygain_track_gain',
     label: 'Replay track gain'
+  }, {
+    key: 'description',
+    label: 'Description'
+  }, {
+    key: 'tvShow',
+    label: 'TV Show'
+  }, {
+    key: 'tvShowSort',
+    label: 'TV show title (alphabetic)'
+  }, {
+    key: 'tvSeason',
+    label: 'TV Season'
+  }, {
+    key: 'tvEpisode',
+    label: 'TV Episode'
+  }, {
+    key: 'tvEpisodeId',
+    label: 'TV Episode ID'
+  }, {
+    key: 'tvNetwork',
+    label: 'TV Network'
   }/*, {
     key: 'picture',
     label: 'Embedded cover art'
   }*/
-  ];
+];
