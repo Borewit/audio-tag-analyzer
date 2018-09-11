@@ -155,7 +155,6 @@ export class AppComponent {
       file
     };
     this.results.push(result);
-    //return mm.parseStream(stream, file.type, {native: true}).then(metadata => {
     return mm.parseFile(file, {native: true}).then(metadata => {
       this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
