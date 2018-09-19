@@ -9,6 +9,8 @@ import {commonLabels, formatLabels, TagLabel} from './format-tags';
 
 const debug = createDebug('audio-tag-analyzer');
 
+// const { version: appVersion } = import('../../package.json')
+
 interface IValue {
   text: string;
   ref?: string;
@@ -58,6 +60,7 @@ const logos = [
 export class AppComponent {
 
   public results: IFileAnalysis[];
+  // public appVersion = appVersion;
 
   public tagLists: ITagList[] = [{
     title: 'Format',
