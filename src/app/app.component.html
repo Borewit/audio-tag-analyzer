@@ -12,6 +12,10 @@
     </div>
   </div>
 
+  <!--
+  <footer class="blockquote-footer">Version {{appVersion}}</footer>
+  -->
+
   <p>Powered by <a href="https://github.com/Borewit/music-metadata">music-metadata</a>. Source code can be found on <a
     href="https://github.com/Borewit/audio-tag-analyzer">GitHub</a>.</p>
 
@@ -30,19 +34,19 @@
       <h2>File information</h2>
       <table class="table">
         <tr>
-          <td>Name</td>
+          <td class="text-right">Name</td>
           <td>{{ upload.file.name }}</td>
         </tr>
         <tr>
-          <td>File type</td>
+          <td class="text-right">File type</td>
           <td>{{ upload.file.type }}</td>
         </tr>
         <tr>
-          <td>Size</td>
+          <td class="text-right">Size</td>
           <td>{{ upload.file.size | bytes}}</td>
         </tr>
         <tr>
-          <td>Last modified</td>
+          <td class="text-right">Last modified</td>
           <td>{{ upload.file.lastModifiedDate }}</td>
         </tr>
       </table>
@@ -69,15 +73,15 @@
             <div class="media-body">
               <table class="table">
                 <tr>
-                  <td>Format</td>
+                  <td class="text-right">Format</td>
                   <td>{{ picture.format }}</td>
                 </tr>
                 <tr>
-                  <td>Type</td>
+                  <td class="text-right">Type</td>
                   <td>{{ picture.type }}</td>
                 </tr>
                 <tr>
-                  <td>Description</td>
+                  <td class="text-right">Description</td>
                   <td>{{ picture.description }}</td>
                 </tr>
               </table>
@@ -91,12 +95,12 @@
 
           <table class="table">
             <tr>
-              <th>Label</th>
+              <th class="text-right">Label</th>
               <th>Value</th>
               <th>Property name</th>
             </tr>
             <tr *ngFor="let tag of tagList.tags">
-              <td><a *ngIf="tag.label.ref" target="_blank" [href]="tag.label.ref">{{tag.label.text}}</a><span
+              <td class="text-right"><a *ngIf="tag.label.ref" target="_blank" [href]="tag.label.ref">{{tag.label.text}}</a><span
                 *ngIf="!tag.label.ref">{{tag.label.text}}</span></td>
               <td>
                 <span *ngFor="let v of tag.value; let first = first;">
@@ -119,11 +123,11 @@
 
           <table class="table">
             <tr>
-              <th>Key</th>
+              <th class="text-right">Key</th>
               <th>Value</th>
             </tr>
             <tr *ngFor="let tag of type.tags">
-              <td>{{tag.id }}</td>
+              <td class="text-right">{{tag.id }}</td>
               <td>{{ tag.value }}</td>
             </tr>
           </table>
