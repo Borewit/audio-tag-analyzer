@@ -12,12 +12,11 @@
     </div>
   </div>
 
-  <!--
-  <footer class="blockquote-footer">Version {{appVersion}}</footer>
-  -->
-
-  <p>Powered by <a href="https://github.com/Borewit/music-metadata">music-metadata</a>. Source code can be found on <a
-    href="https://github.com/Borewit/audio-tag-analyzer">GitHub</a>.</p>
+  <footer class="blockquote-footer">
+    <a href="https://github.com/Borewit/audio-tag-analyzer">Audio-Tag-Analyzer</a> v{{version.app}} |
+    <a href="https://github.com/Borewit/music-metadata-browser">music-metadata-browser</a> v{{version.mmb}} |
+    <a href="https://github.com/Borewit/music-metadata">music-metadata</a> v{{version.mm}}
+  </footer>
 
   <div class="center">
     <app-drag-and-drop-box (emitDropFiles)="handleFilesDropped($event)"

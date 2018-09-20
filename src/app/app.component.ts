@@ -1,4 +1,4 @@
-import {Component, NgZone} from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 import * as mm from 'music-metadata-browser';
 
 import fileReaderStream from 'filereader-stream';
@@ -8,8 +8,6 @@ import * as createDebug from 'debug';
 import {commonLabels, formatLabels, TagLabel} from './format-tags';
 
 const debug = createDebug('audio-tag-analyzer');
-
-// const { version: appVersion } = import('../../package.json')
 
 interface IValue {
   text: string;
@@ -57,10 +55,9 @@ const logos = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   public results: IFileAnalysis[];
-  // public appVersion = appVersion;
 
   public tagLists: ITagList[] = [{
     title: 'Format',
@@ -74,8 +71,15 @@ export class AppComponent {
 
   public nativeTags: {type: string, tags: {id: string, value: string}[]}[] = [];
 
+  public version = {
+    app: require('../../package.json').version,
+    mmb: require('../../node_modules/music-metadata-browser/package.json').version,
+    mm: require('../../node_modules/music-metadata/package.json').version
+  };
+
   constructor(private zone: NgZone) {
   }
+
 
   public handleFilesDropped(files: File[]) {
     this.results = []; // initialize results
