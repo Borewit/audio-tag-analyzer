@@ -5,7 +5,7 @@
 # Audio Tag Analyzer
 
 Project demonstrating [music-metadata-browser](https://github.com/Borewit/music-metadata-browser), the browser version of [music-metadata](https://github.com/Borewit/music-metadata).
-Drag and drop any audio file and it extract ans list the music metadata found.
+Drag and drop any audio file and displays a list of metadata found.
 
 ## Live version
 
