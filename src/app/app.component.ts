@@ -1,7 +1,6 @@
 import {Component, NgZone} from '@angular/core';
 import * as mm from 'music-metadata-browser';
 
-import fileReaderStream from 'filereader-stream';
 import http from 'stream-http';
 import * as createDebug from 'debug';
 
@@ -149,14 +148,13 @@ export class AppComponent {
     const file: File = files.shift();
     if (file) {
       debug('Start parsing file %s', file.name);
-      const stream = fileReaderStream(file);
-      return this.parseStream(file, stream).then(() => {
+      return this.parseStream(file).then(() => {
         return this.parseFiles(files);
       });
     }
   }
 
-  private parseStream(file: File, stream): Promise<void> {
+  private parseStream(file: File): Promise<void> {
     debug('Parsing %s of type %s', file.name, file.type);
     const result: IFileAnalysis = {
       file
