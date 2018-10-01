@@ -148,19 +148,19 @@ export class AppComponent {
     const file: File = files.shift();
     if (file) {
       debug('Start parsing file %s', file.name);
-      return this.parseStream(file).then(() => {
+      return this.parseFile(file).then(() => {
         return this.parseFiles(files);
       });
     }
   }
 
-  private parseStream(file: File): Promise<void> {
+  private parseFile(file: File): Promise<void> {
     debug('Parsing %s of type %s', file.name, file.type);
     const result: IFileAnalysis = {
       file
     };
     this.results.push(result);
-    return mm.parseFile(file, {native: true}).then(metadata => {
+    return mm.parseBlob(file, {native: true}).then(metadata => {
       this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;
