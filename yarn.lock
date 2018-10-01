@@ -3195,7 +3195,7 @@ is-symbol@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
 
-is-typedarray@~1.0.0:
+is-typedarray@^1.0.0, is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
@@ -3989,17 +3989,18 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.3.2.tgz#e9384638b8a2c04e7f38d722dd3ce62ce72ab046"
+music-metadata-browser@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.3.3.tgz#41f42ea32ef5feede2f5e5798ed70fc5f2dc7e1e"
   dependencies:
     assert "^1.4.1"
     buffer "^5.2.1"
-    music-metadata "^3.1.0"
+    music-metadata "^3.1.1"
+    typedarray-to-buffer "^3.1.5"
 
-music-metadata@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.1.0.tgz#4340a4148dff9567a6f7b0139bf1ce3add88d0da"
+music-metadata@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.1.1.tgz#80eccd1aa38bf6f03edc5e2c8176202b6b2c8afc"
   dependencies:
     debug "^4.0.1"
     file-type "9"
@@ -6009,6 +6010,12 @@ type-is@~1.6.15, type-is@~1.6.16:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.18"
+
+typedarray-to-buffer@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"
+  dependencies:
+    is-typedarray "^1.0.0"
 
 typedarray@^0.0.6:
   version "0.0.6"
