@@ -24,7 +24,7 @@
     "core-js": "^2.5.7",
     "debug": "^4.0.1",
     "drag-drop": "^4.2.0",
-    "music-metadata-browser": "^0.4.0",
+    "music-metadata-browser": "^0.6.0",
     "process": "^0.11.10",
     "rxjs": "^6.3.2",
     "web-streams-polyfill": "^1.3.2",

@@ -1,7 +1,6 @@
 import {Component, NgZone} from '@angular/core';
 import * as mm from 'music-metadata-browser';
 
-import http from 'stream-http';
 import * as createDebug from 'debug';
 
 import {commonLabels, formatLabels, TagLabel} from './format-tags';
@@ -136,10 +135,26 @@ export class AppComponent {
   }
 
   private httpGetByUrl(url: string): Promise<any> {
+    const result: IFileAnalysis = {
+      file: {
+        name: url,
+        type: '???'
+      }
+    };
+    this.results.push(result);
     // Assume URL
-    return new Promise(resolve => {
-      http.get(url, stream => {
-        resolve(stream);
+    return mm.fetchFromUrl(url).then(metadata => {
+      this.zone.run(() => {
+        debug('Completed parsing from URL: %s:', url, metadata);
+        result.metadata = metadata;
+        this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
+        this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
+        this.nativeTags = this.prepareNativeTags(metadata.native);
+      });
+    }).catch(err => {
+      this.zone.run<void>(() => {
+        debug('Error: ' + err.message);
+        result.parseError = err.message;
       });
     });
   }
@@ -173,7 +188,7 @@ export class AppComponent {
         debug('Error: ' + err.message);
         result.parseError = err.message;
       });
-    }) as any;
+    });
   }
 
 }
