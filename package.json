@@ -26,8 +26,8 @@
     "drag-drop": "^4.2.0",
     "music-metadata-browser": "^0.6.0",
     "process": "^0.11.10",
+    "readable-stream": "^3.0.6",
     "rxjs": "^6.3.2",
-    "web-streams-polyfill": "^1.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

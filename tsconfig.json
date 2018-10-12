@@ -14,7 +14,7 @@
       "dom"
     ],
     "paths": {
-      "stream": [ "node_modules/web-streams-polyfill/dist/polyfill.js" ],
+      "stream": [ "node_modules/readable-stream/readable.js" ],
       "assert": [ "node_modules/assert-plus/assert.js" ]
 
     }
