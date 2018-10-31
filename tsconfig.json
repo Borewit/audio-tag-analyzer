@@ -14,8 +14,8 @@
       "dom"
     ],
     "paths": {
-      "stream": [ "node_modules/readable-stream/readable.js" ],
-      "assert": [ "node_modules/assert-plus/assert.js" ]
+      "stream": [ "node_modules/readable-stream" ],
+      "assert": [ "node_modules/assert" ]
 
     }
   }

@@ -25,10 +25,6 @@ interface IUrlAsFile {
 
 interface IFileAnalysis {
   file: File | IUrlAsFile;
-  http?: {
-    url: string;
-    type: string;
-  };
   metadata?: mm.IAudioMetadata;
   parseError?: Error;
 }
@@ -129,23 +125,22 @@ export class AppComponent {
 
   private parseUsingHttp(url: string): Promise<void> {
     debug('Converting HTTP to stream using: ' + url);
-    return this.httpGetByUrl(url).then(stream => {
-      // ToDo return this.parseStream({name: url, type: stream.headers['content-type']}, stream);
-    });
-  }
 
-  private httpGetByUrl(url: string): Promise<any> {
+    const file: IUrlAsFile = {
+      name: url,
+      type: '?'
+    };
+
     const result: IFileAnalysis = {
-      file: {
-        name: url,
-        type: '???'
-      }
+      file
     };
     this.results.push(result);
-    // Assume URL
-    return mm.fetchFromUrl(url).then(metadata => {
+
+    return mm.fetchFromUrl(url, {native: true}).then(metadata => {
+
       this.zone.run(() => {
-        debug('Completed parsing from URL: %s:', url, metadata);
+
+        debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;
         this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
         this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
@@ -156,7 +151,7 @@ export class AppComponent {
         debug('Error: ' + err.message);
         result.parseError = err.message;
       });
-    });
+    }) as any;
   }
 
   private parseFiles(files: File[]): Promise<void> {

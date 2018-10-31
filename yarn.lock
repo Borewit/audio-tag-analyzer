@@ -2299,8 +2299,8 @@ file-loader@^1.1.11:
     schema-utils "^0.4.5"
 
 file-type@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-10.0.0.tgz#084f32ab827238aa9a1482195ca7448c77a006b3"
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-10.2.0.tgz#91177ceb904963e2be53add360b213c2dc273f64"
 
 filename-regex@^2.0.0:
   version "2.0.1"
@@ -3784,7 +3784,7 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-media-typer@0.3.0, media-typer@^0.3.0:
+media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
@@ -4007,27 +4007,27 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.6.1.tgz#6b44544f817937e00d82bb983a0c49044c2b3348"
+music-metadata-browser@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.6.2.tgz#f43f36ec6e58c4fb8fa8b07de0fbda8fa6395996"
   dependencies:
     assert "^1.4.1"
     buffer "^5.2.1"
     debug "^4.0.1"
-    music-metadata "^3.1.4"
+    music-metadata "^3.1.6"
     remove "^0.1.5"
     typedarray-to-buffer "^3.1.5"
 
-music-metadata@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.1.4.tgz#ca652c462ebd5f470d15045888f35e3580d0545b"
+music-metadata@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.1.6.tgz#d91ede54eb3b19023f3db5e833354d7ac51adfa7"
   dependencies:
     debug "^4.1.0"
     file-type "^10.0.0"
-    media-typer "^0.3.0"
-    strtok3 "^2.1.0"
+    media-typer "0.3.0"
+    strtok3 "^2.1.1"
     then-read-stream "^1.3.1"
-    token-types "^1.0.0"
+    token-types "^1.0.1"
 
 nan@^2.10.0, nan@^2.9.2:
   version "2.11.0"
@@ -5783,13 +5783,13 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-strtok3@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-2.1.0.tgz#f1e3aab64c15dadd23b09fdf9788afd11031b85a"
+strtok3@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-2.1.1.tgz#33772fc5e2b5872c4af7271187479de7bfd60c11"
   dependencies:
-    debug "^4.0.1"
-    then-read-stream "^1.3.0"
-    token-types "^1.0.0"
+    debug "^4.1.0"
+    then-read-stream "^1.3.1"
+    token-types "^1.0.1"
 
 style-loader@^0.21.0:
   version "0.21.0"
@@ -5860,10 +5860,6 @@ tar@^4:
     mkdirp "^0.5.0"
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
-
-then-read-stream@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/then-read-stream/-/then-read-stream-1.3.0.tgz#fb99314d1c5845fea29e5d271f261a1259039c09"
 
 then-read-stream@^1.3.1:
   version "1.3.1"
@@ -5940,9 +5936,9 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-token-types@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/token-types/-/token-types-1.0.0.tgz#91f8180eb5464abb28af361ced3ac855a1e18fb2"
+token-types@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/token-types/-/token-types-1.0.1.tgz#c91671bd80f7e2ded10dee4b8ff17247c40378c7"
 
 toposort@^1.0.0:
   version "1.0.7"
