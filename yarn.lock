@@ -4007,27 +4007,26 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.6.4.tgz#5d96e7587a4250d1dd9e54cef889416845b7e9b6"
+music-metadata-browser@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.6.5.tgz#aa1a089d184da64ff532483fe5ed5c3e3e79fa1a"
   dependencies:
     assert "^1.4.1"
     buffer "^5.2.1"
     debug "^4.0.1"
-    music-metadata "^3.2.2"
+    music-metadata "^3.3.0"
     readable-stream "^3.0.6"
     remove "^0.1.5"
     typedarray-to-buffer "^3.1.5"
 
-music-metadata@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.2.2.tgz#12449ebeaa8560baaebcc401838f9804881c424f"
+music-metadata@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.3.0.tgz#54389503007897b349051fcbced0a0adec93e525"
   dependencies:
     debug "^4.1.0"
     file-type "^10.5.0"
     media-typer "0.3.0"
-    strtok3 "^2.1.1"
-    then-read-stream "^1.3.1"
+    strtok3 "^2.3.0"
     token-types "^1.0.1"
 
 nan@^2.10.0, nan@^2.9.2:
@@ -5784,12 +5783,12 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-strtok3@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-2.1.1.tgz#33772fc5e2b5872c4af7271187479de7bfd60c11"
+strtok3@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-2.3.0.tgz#1f0168ce82c5aa52bf6a567ef44e6c70a69cf514"
   dependencies:
     debug "^4.1.0"
-    then-read-stream "^1.3.1"
+    then-read-stream "^1.5.0"
     token-types "^1.0.1"
 
 style-loader@^0.21.0:
@@ -5862,9 +5861,9 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-then-read-stream@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/then-read-stream/-/then-read-stream-1.3.1.tgz#81f91fa31d8044bd9a6d49b84af4fb6b34b5cfc7"
+then-read-stream@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/then-read-stream/-/then-read-stream-1.5.0.tgz#1077809ac135f11fc54fb7ae01631dff8b598082"
 
 through2@^2.0.0:
   version "2.0.3"
