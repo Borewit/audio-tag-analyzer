@@ -4068,19 +4068,19 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^0.6.5:
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.6.6.tgz#45ac62d914d78ee36cb9fa3ca99962511805460e"
+music-metadata-browser@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.7.1.tgz#ac9ad8b679d2810dda6447a82e55475fb1f23b9e"
   dependencies:
     assert "^1.4.1"
     buffer "^5.2.1"
     debug "^4.0.1"
-    music-metadata "^3.4.0"
+    music-metadata "^3.5.2"
     readable-stream "^3.0.6"
     remove "^0.1.5"
     typedarray-to-buffer "^3.1.5"
 
-music-metadata@^3.4.0:
+music-metadata@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.5.2.tgz#73a745504ba05565d04522d77172876e0db17c01"
   dependencies:
