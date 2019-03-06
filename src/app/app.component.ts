@@ -74,11 +74,13 @@ export class AppComponent {
   constructor(private zone: NgZone) {
   }
 
-
-  public handleFilesDropped(files: File[]) {
+  public async handleFilesDropped(files: File[]) {
     this.results = []; // initialize results
-    this.parseFiles(files);
-    debug('handleFilesDropped', {files});
+    debug('handleFilesDropped', files);
+    for (const file of files) {
+      debug('Start parsing file %s', file.name);
+      await this.parseFile(file);
+    }
   }
 
   public handleTextDropped(text) {
@@ -152,16 +154,6 @@ export class AppComponent {
         result.parseError = err.message;
       });
     }) as any;
-  }
-
-  private parseFiles(files: File[]): Promise<void> {
-    const file: File = files.shift();
-    if (file) {
-      debug('Start parsing file %s', file.name);
-      return this.parseFile(file).then(() => {
-        return this.parseFiles(files);
-      });
-    }
   }
 
   private parseFile(file: File): Promise<void> {

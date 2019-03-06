@@ -12,7 +12,7 @@ const debug = createDebug('audio-tag-analyzer:drag-and-drop');
 })
 export class DragAndDropBoxComponent implements AfterContentInit, OnDestroy {
 
-  private dragAndDrop;
+  private removeDragAndDrop: () => void;
 
   constructor(private elementRef: ElementRef, private zone: NgZone) {
   }
@@ -42,7 +42,7 @@ export class DragAndDropBoxComponent implements AfterContentInit, OnDestroy {
   ngAfterContentInit() {
     const e = this.elementRef.nativeElement;
     const divDrop = e.childNodes[0];
-    this.dragAndDrop = dragDrop(divDrop, {
+    this.removeDragAndDrop = dragDrop(divDrop, {
       onDrop: (files) => {
         this.emitFileEvent(this.emitDropFiles, 'drop', files);
       },
@@ -59,6 +59,6 @@ export class DragAndDropBoxComponent implements AfterContentInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.dragAndDrop.remove();
+    this.removeDragAndDrop();
   }
 }
