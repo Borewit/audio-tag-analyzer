@@ -15,8 +15,8 @@
     ],
     "paths": {
       "stream": [ "node_modules/readable-stream" ],
-      "assert": [ "node_modules/assert" ]
-
+      "assert": [ "node_modules/assert" ],
+      "core-js/es7/reflect": [ "node_modules/core-js/proposals/reflect-metadata" ]
     }
   }
 }
