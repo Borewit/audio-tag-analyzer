@@ -3884,21 +3884,21 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.8.0.tgz#0cfd54116ed2266561fd6a8150de90fd60c1cdee"
+music-metadata-browser@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-0.9.0.tgz#5ad92bccc881ee5872281199717ab6926cc16423"
   dependencies:
     assert "^1.4.1"
     buffer "^5.2.1"
     debug "^4.0.1"
-    music-metadata "^3.6.1"
+    music-metadata "^3.7.0"
     readable-stream "^3.3.0"
     remove "^0.1.5"
     typedarray-to-buffer "^3.1.5"
 
-music-metadata@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.6.1.tgz#f66b81a96c2055493683fa61b462bc6576408fc3"
+music-metadata@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-3.7.0.tgz#1e3f9ef24b7e555182cd360c874b7ef0b666f707"
   dependencies:
     debug "^4.1.0"
     file-type "^10.5.0"
