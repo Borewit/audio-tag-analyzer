@@ -19,8 +19,20 @@ export interface TagLabel {
 
 export const formatLabels: TagLabel[] = [
   {
-    key: 'dataformat',
-    label: 'Data format'
+    key: 'container',
+    label: 'Audio container'
+  },
+  {
+    key: 'codec',
+    label: 'Audio codec(s)'
+  },
+  {
+    key: 'tool',
+    label: 'Tool (encoder)'
+  },
+  {
+    key: 'codecProfile',
+    label: 'Codec profile'
   }, {
     key: 'tagTypes',
     label: 'Tag header type(s)'
@@ -39,12 +51,6 @@ export const formatLabels: TagLabel[] = [
   }, {
     key: 'bitsPerSample',
     label: 'Audio bit depth'
-  }, {
-    key: 'encoder',
-    label: 'Encoder name'
-  }, {
-    key: 'codecProfile',
-    label: 'Codec profile'
   }, {
     key: 'lossless',
     label: 'Lossless?'
