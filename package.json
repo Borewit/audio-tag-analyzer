@@ -28,7 +28,7 @@
     "debug": "^4.1.0",
     "drag-drop": "^4.2.0",
     "karma-cli": "^2.0.0",
-    "music-metadata-browser": "^1.0.0",
+    "music-metadata-browser": "^1.2.0",
     "process": "^0.11.10",
     "readable-stream": "^3.0.6",
     "rxjs": "^6.3.2",
