@@ -3791,9 +3791,10 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-1.2.0.tgz#31903d18ecfdd1a559ff2a56e3d2ca362de059df"
+music-metadata-browser@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-1.2.1.tgz#43b0b6590bf445fe273190585aad4f442095ab7e"
+  integrity sha512-CMfHyeAa8t66nP66xYNNwvynIw/YZ3GSmotjSccI/wUYgmcLlnUkbLOTsuAB6SS9/d30jl4M35FUegpC0KgTEA==
   dependencies:
     assert "^2.0.0"
     buffer "^5.2.1"
