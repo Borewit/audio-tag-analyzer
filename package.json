@@ -1,6 +1,6 @@
 {
   "name": "audio-tag-analyzer",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
