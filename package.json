@@ -26,7 +26,7 @@
     "buffer": "^5.2.1",
     "core-js": "^3.0.1",
     "debug": "^4.1.0",
-    "drag-drop": "^4.2.0",
+    "drag-drop": "^5.0.1",
     "music-metadata-browser": "^1.3.0",
     "process": "^0.11.10",
     "rxjs": "^6.3.2",
