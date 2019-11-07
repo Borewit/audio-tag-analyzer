@@ -5146,10 +5146,10 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-1.6.2.tgz#fcea27075b10e8d3d60fb94abd3915955cf99e1e"
-  integrity sha512-2BMQaWTrqN0TXFm35csYNIHuUQURfsrgURCsKcBwZDFBCE3CExmjZVCxFfg9NfXh0vffokZD8vjYTITs/x/Ynw==
+music-metadata-browser@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-1.6.3.tgz#52d8eda380d6ddfc9d15f331b3cceb90992dcd58"
+  integrity sha512-lnWeTosMllaSAGrgx63P29t1QWbuCmpa8lzUR1j1iNxT+TQ0lSRqpswmGr0o9lCRs4FD5M9Tf9UYtAj2QDazwA==
   dependencies:
     assert "^2.0.0"
     buffer "^5.2.1"
