@@ -2864,10 +2864,10 @@ domino@^2.1.2:
   resolved "https://registry.yarnpkg.com/domino/-/domino-2.1.3.tgz#0ca1ad02cbd316ebe2e99e0ac9fb0010407d4601"
   integrity sha512-EwjTbUv1Q/RLQOdn9k7ClHutrQcWGsfXaRQNOnM/KgK4xDBoLFEcIRFuBSxAx13Vfa63X029gXYrNFrSy+DOSg==
 
-drag-drop@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/drag-drop/-/drag-drop-5.0.1.tgz#7c4930eeedcdce0615207610a30954615fc27c6a"
-  integrity sha512-jvdx+PzGvUXnxNrvyCi9rV2Fb4XBFDED/oIkC1IPTYbo0JSJJuHCj/D3/73J75gRIN+FjiRADYlymxqQVuBUtQ==
+drag-drop@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/drag-drop/-/drag-drop-5.0.2.tgz#e5b617b406386d96a48ded56e3b47784baa09959"
+  integrity sha512-Otz112e738r/tlwjnDrM0l1/F5IRghUnUic2uZioh7kIQNzg4i1SQEYL/1ihu///ibmnw/kABlbQDo8UTPoTUg==
   dependencies:
     blob-to-buffer "^1.0.2"
     run-parallel "^1.0.0"
