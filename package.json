@@ -53,5 +53,8 @@
     "ts-node": "~8.4.1",
     "tslint": "^5.20.1",
     "typescript": "3.5"
+  },
+  "resolutions": {
+    "**/util": "^0.12.0"
   }
 }
