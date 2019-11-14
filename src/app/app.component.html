@@ -54,6 +54,17 @@
         Parsing...
       </div>
 
+      <div *ngIf="upload.metadata">
+        <h2>Quality information</h2>
+        <div *ngIf="upload.metadata && upload.metadata.quality.warnings.length > 0">
+          <h2>Parser warnings</h2>
+          <div *ngFor="let warning of upload.metadata.quality.warnings" class="alert alert-warning">{{warning.message}}</div>
+        </div>
+        <div *ngIf="upload.metadata && upload.metadata.quality.warnings.length === 0">
+          <div class="alert alert-success">No issues found</div>
+        </div>
+      </div>
+
       <div *ngIf="upload.parseError" class="alert alert-danger">
         <p>Failed to parse <i>{{ upload.file.name }}</i>.
         <p>Error message: {{ upload.parseError }}.</p>
