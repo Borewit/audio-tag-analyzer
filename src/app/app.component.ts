@@ -138,7 +138,7 @@ export class AppComponent {
     };
     this.results.push(result);
 
-    return mm.fetchFromUrl(url, {native: true}).then(metadata => {
+    return mm.fetchFromUrl(url).then(metadata => {
 
       this.zone.run(() => {
 
@@ -162,7 +162,7 @@ export class AppComponent {
       file
     };
     this.results.push(result);
-    return mm.parseBlob(file, {native: true}).then(metadata => {
+    return mm.parseBlob(file).then(metadata => {
       this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;
