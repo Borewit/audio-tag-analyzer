@@ -15,3 +15,6 @@ update_configs:
           dependency_name: "chai"
       - match:
           dependency_name: "typescript"
+      - match:
+          dependency_name: "music-metadata-browser"
+          update_type: "semver:patch"
