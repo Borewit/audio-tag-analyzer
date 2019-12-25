@@ -39,3 +39,5 @@ update_configs:
           update_type: "semver:minor"
       - match:
           dependency_name: "codelyzer"
+      - match:
+          dependency_name: "karma-jasmine-html-reporter"
