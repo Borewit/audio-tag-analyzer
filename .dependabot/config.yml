@@ -38,6 +38,9 @@ update_configs:
           dependency_name: "@angular/http"
           update_type: "semver:minor"
       - match:
+          dependency_name: "@angular/language-service"
+          update_type: "semver:minor"
+      - match:
           dependency_name: "codelyzer"
       - match:
           dependency_name: "karma-jasmine-html-reporter"
