@@ -10,16 +10,16 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "@angular/animations": "^8.0.3",
-    "@angular/common": "^8.0.3",
-    "@angular/compiler": "^8.0.3",
-    "@angular/core": "^8.0.3",
-    "@angular/forms": "^8.0.3",
+    "@angular/animations": "^9.0.1",
+    "@angular/common": "^9.0.1",
+    "@angular/compiler": "^9.0.1",
+    "@angular/core": "^9.0.1",
+    "@angular/forms": "^9.0.1",
     "@angular/http": "^7.2.16",
-    "@angular/platform-browser": "^8.0.3",
-    "@angular/platform-browser-dynamic": "^8.0.3",
-    "@angular/platform-server": "^8.0.3",
-    "@angular/router": "^8.0.3",
+    "@angular/platform-browser": "^9.0.1",
+    "@angular/platform-browser-dynamic": "^9.0.1",
+    "@angular/platform-server": "^9.0.1",
+    "@angular/router": "^9.0.1",
     "angular-pipes": "^10.0.0",
     "assert": "^2.0.0",
     "bootstrap": "4.4.1",
@@ -30,13 +30,14 @@
     "music-metadata-browser": "^2.0.4",
     "process": "^0.11.10",
     "rxjs": "^6.5.4",
-    "zone.js": "^0.10.1"
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.22",
-    "@angular/cli": "^8.3.22",
-    "@angular/compiler-cli": "^8.0.3",
-    "@angular/language-service": "^8.2.14",
+    "@angular-devkit/build-angular": "~0.900.2",
+    "@angular/cli": "^9.0.2",
+    "@angular/compiler-cli": "^9.0.1",
+    "@angular/language-service": "^9.0.1",
     "@types/jasmine": "^3.5.5",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^13.7.2",
@@ -52,9 +53,10 @@
     "protractor": "^5.4.3",
     "ts-node": "~8.6.2",
     "tslint": "^5.20.1",
-    "typescript": "3.5"
+    "typescript": "3.7.5"
   },
   "resolutions": {
-    "**/util": "^0.12.0"
+    "**/util": "^0.12.0",
+    "**/buffer": "^5.4.3"
   }
 }

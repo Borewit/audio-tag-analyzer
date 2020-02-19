@@ -3,11 +3,13 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "types": ["node"],
-    "sourceMap": true,
-    "module": "commonjs"
-  },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
+    "sourceMap": true
+},
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
   ]
 }
