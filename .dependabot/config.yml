@@ -26,9 +26,6 @@ update_configs:
       - match:
           dependency_name: "core-js"
       - match:
-          dependency_name: "@angular/compiler-cli"
-          update_type: "semver:minor"
-      - match:
           dependency_name: "@angular/common"
           update_type: "semver:minor"
       - match:
@@ -39,9 +36,6 @@ update_configs:
           update_type: "semver:minor"
       - match:
           dependency_name: "@angular/language-service"
-          update_type: "semver:minor"
-      - match:
-          dependency_name: "@angular-devkit/build-angular"
           update_type: "semver:minor"
       - match:
           dependency_name: "@angular-devkit/build-angular"
