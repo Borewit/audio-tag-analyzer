@@ -44,6 +44,12 @@ update_configs:
           dependency_name: "@angular-devkit/build-angular"
           update_type: "semver:minor"
       - match:
+          dependency_name: "@angular-devkit/build-angular"
+          update_type: "semver:minor"
+      - match:
+          dependency_name: "@angular/cli"
+          update_type: "semver:minor"
+      - match:
           dependency_name: "codelyzer"
       - match:
           dependency_name: "karma-jasmine"
