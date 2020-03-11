@@ -157,12 +157,16 @@ export class AppComponent {
   }
 
   private parseFile(file: File): Promise<void> {
+    const t0 = new Date().getTime();
     debug('Parsing %s of type %s', file.name, file.type);
     const result: IFileAnalysis = {
       file
     };
     this.results.push(result);
     return mm.parseBlob(file).then(metadata => {
+      const t1 = new Date().getTime();
+      const duration = t1 - t0;
+      debug(`Parsing took ${duration} ms`);
       this.zone.run(() => {
         debug('Completed parsing of %s:', file.name, metadata);
         result.metadata = metadata;
