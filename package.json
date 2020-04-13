@@ -24,7 +24,7 @@
     "assert": "^2.0.0",
     "bootstrap": "4.4.1",
     "buffer": "^5.5.0",
-    "core-js": "^3.6.4",
+    "core-js": "^3.6.5",
     "debug": "^4.1.0",
     "drag-drop": "^6.0.0",
     "music-metadata-browser": "^2.0.5",
