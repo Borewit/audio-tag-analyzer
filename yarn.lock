@@ -3314,10 +3314,10 @@ dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
-drag-drop@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/drag-drop/-/drag-drop-6.0.0.tgz#5eb863c3a6a89f5ed0f8d4ddce2e5c136887f0ef"
-  integrity sha512-Ety3fa0SL8qsoB/xas1NP/pRNiV0CZ9o2a6a4TbprrKzvTqN1QwxWdO+NKMFPk3jfjMsQ2UJs5vhQAxu82mgRA==
+drag-drop@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/drag-drop/-/drag-drop-6.0.2.tgz#f6028fec8f2150fedd687b4a143f60b4f9b787a9"
+  integrity sha512-zmODeoCxJn79q5umUV5P7omtUyljXFigI7Ci7fNMcY1jktCC2J8roOyYPVMbMbLO1rz/nEkjWJ3s8u3mabei4A==
   dependencies:
     blob-to-buffer "^1.0.2"
     run-parallel "^1.0.0"
