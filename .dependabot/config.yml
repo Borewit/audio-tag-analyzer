@@ -44,10 +44,20 @@ update_configs:
           dependency_name: "@angular/cli"
           update_type: "semver:minor"
       - match:
+          dependency_name: "@angular-devkit/build-angular"
+          update_type: "semver:minor"
+      - match:
+          dependency_name: "@angular/language-service"
+          update_type: "semver:minor"
+      - match:
           dependency_name: "codelyzer"
       - match:
           dependency_name: "karma-jasmine"
       - match:
           dependency_name: "karma-jasmine-html-reporter"
+      - match:
+          dependency_name: "karma-coverage-istanbul-reporter"
+      - match:
+          dependency_name: "jasmine-spec-reporter"
       - match:
           dependency_name: "protractor"
