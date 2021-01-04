@@ -1844,10 +1844,10 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.0.0.tgz#23c0df14f6a88077f5f986c0d167ec03c3d5537c"
   integrity sha512-Phlt0plgpIIBOGTT/ehfFnbNlfsDEiqmzE2KRXoX1bLIlir4X/MR+zSyBEkL05ffWgnRSf/DXv+WrUAVr93/ow==
 
-blob-to-buffer@^1.0.2:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/blob-to-buffer/-/blob-to-buffer-1.2.8.tgz#78eeeb332f1280ed0ca6fb2b60693a8c6d36903a"
-  integrity sha512-re0AIxakF504MgeMtIyJkVcZ8T5aUxtp/QmTMlmjyb3P44E1BEv5x3LATBGApWAJATyXHtkXRD+gWTmeyYLiQA==
+blob-to-buffer@^1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/blob-to-buffer/-/blob-to-buffer-1.2.9.tgz#a17fd6c1c564011408f8971e451544245daaa84a"
+  integrity sha512-BF033y5fN6OCofD3vgHmNtwZWRcq9NLyyxyILx9hfMy1sXYy4ojFl765hJ2lP0YaN2fuxPaLO2Vzzoxy0FLFFA==
 
 blob@0.0.5:
   version "0.0.5"
@@ -3262,13 +3262,13 @@ dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
-drag-drop@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/drag-drop/-/drag-drop-6.0.2.tgz#f6028fec8f2150fedd687b4a143f60b4f9b787a9"
-  integrity sha512-zmODeoCxJn79q5umUV5P7omtUyljXFigI7Ci7fNMcY1jktCC2J8roOyYPVMbMbLO1rz/nEkjWJ3s8u3mabei4A==
+drag-drop@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/drag-drop/-/drag-drop-6.1.0.tgz#4e1bc74c0a7e4a35ca2e2af6718f96216e7c5d7d"
+  integrity sha512-8dHES26qsDKKDfLrJdNcNqERkAUJmECm5FZla462/Oj5hRAADTRrf9+I7ri3GaaUlhPhJejQfONRyJoH1fly1A==
   dependencies:
-    blob-to-buffer "^1.0.2"
-    run-parallel "^1.0.0"
+    blob-to-buffer "^1.2.9"
+    run-parallel "^1.1.10"
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
@@ -7518,10 +7518,10 @@ run-async@^2.4.0:
   dependencies:
     is-promise "^2.1.0"
 
-run-parallel@^1.0.0, run-parallel@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.1.9.tgz#c9dd3a7cf9f4b2c4b6244e173a6ed866e61dd679"
-  integrity sha512-DEqnSRTDw/Tc3FXf49zedI638Z9onwUotBMiUFKmrO2sdFKIbXamXGQ3Axd4qgphxKB4kw/qP1w5kTxnfU1B9Q==
+run-parallel@^1.1.10, run-parallel@^1.1.9:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.1.10.tgz#60a51b2ae836636c81377df16cb107351bcd13ef"
+  integrity sha512-zb/1OuZ6flOlH6tQyMPUrE3x3Ulxjlo9WIVXR4yVYi4H9UXQaeIsPbLn2R3O3vQCnDKkAl2qHiuocKKX4Tz/Sw==
 
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
