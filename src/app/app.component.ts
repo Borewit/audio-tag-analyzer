@@ -40,7 +40,7 @@ const logos = [
   'https://upload.wikimedia.org/wikipedia/commons/e/ea/Mp3.svg',
   'https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg',
   'https://upload.wikimedia.org/wikipedia/commons/8/8d/Xiph.Org_logo_square.svg',
-  'https://www.shareicon.net/download/2015/12/08/684232_file.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/7/76/Windows_Media_Player_simplified_logo.svg',
   'http://www.wavpack.com/wavpacklogo.svg'
 ];
 
