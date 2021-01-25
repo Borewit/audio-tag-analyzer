@@ -21,7 +21,7 @@
     "@angular/platform-server": "^9.0.1",
     "@angular/router": "^9.0.1",
     "angular-pipes": "^10.0.0",
-    "bootstrap": "4.5.3",
+    "bootstrap": "4.6.0",
     "buffer": "^6.0.3",
     "core-js": "^3.8.3",
     "debug": "^4.1.0",
