@@ -23,7 +23,7 @@
     "angular-pipes": "^10.0.0",
     "bootstrap": "4.5.3",
     "buffer": "^6.0.3",
-    "core-js": "^3.8.2",
+    "core-js": "^3.8.3",
     "debug": "^4.1.0",
     "drag-drop": "^6.1.0",
     "music-metadata-browser": "^2.2.0",
