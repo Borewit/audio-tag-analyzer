@@ -52,7 +52,7 @@
     "protractor": "^7.0.0",
     "ts-node": "~9.1.1",
     "tslint": "^6.1.3",
-    "typescript": "3.7.5"
+    "typescript": "3.7.7"
   },
   "resolutions": {
     "**/util": "^0.12.0",
