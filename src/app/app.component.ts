@@ -36,7 +36,7 @@ interface ITagList {
 }
 
 const logos = [
-  'https://upload.wikimedia.org/wikipedia/commons/e/e0/Flac_logo_vector.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/a/a2/FLAC_logo_vector.svg',
   'https://upload.wikimedia.org/wikipedia/commons/e/ea/Mp3.svg',
   'https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg',
   'https://upload.wikimedia.org/wikipedia/commons/8/8d/Xiph.Org_logo_square.svg',
