@@ -26,7 +26,7 @@
     "core-js": "^3.14.0",
     "debug": "^4.1.0",
     "drag-drop": "^7.2.0",
-    "music-metadata-browser": "^2.2.6",
+    "music-metadata-browser": "^2.3.0",
     "process": "^0.11.10",
     "rxjs": "^6.6.7",
     "tslib": "^1.14.1",
