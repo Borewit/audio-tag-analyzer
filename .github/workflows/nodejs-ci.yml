@@ -13,16 +13,13 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-
-      - name: Install Angular
-        run: npm install -g yarn @angular/cli
+          node-version: 14.x
 
       - name: Install dependencies
         run: yarn install
 
       - name: Angular code analysis
-        run: ng lint
+        run: yarn lint
 
       - name: Angular build
-        run: ng build --prod
+        run: yarn build
