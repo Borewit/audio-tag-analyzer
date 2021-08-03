@@ -1564,11 +1564,6 @@
     semver "7.3.4"
     semver-intersect "1.4.0"
 
-"@tokenizer/token@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.1.1.tgz#f0d92c12f87079ddfd1b29f614758b9696bc29e3"
-  integrity sha512-XO6INPbZCxdprl+9qa/AAbFFOMzzwqYxpjPgLICrMD6C2FCw6qfJOPcBk6JqqPLSaZ/Qx87qn4rpPmPMwaAK6w==
-
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.3.0.tgz#fe98a93fe789247e998c75e74e9c7c63217aa276"
@@ -4161,14 +4156,14 @@ file-loader@6.2.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-file-type@16.5.2:
-  version "16.5.2"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.2.tgz#e6626f7a253af2ecf499f31995f0e849226825a8"
-  integrity sha512-lnHRZj2USLF3v4C5ZY7/vQQeoTVA1YV9TtD6UUCr9z5Cd0uyutqxPBJxkXzM6lufPNuSfefq/yFmnSPz0C3wNw==
+file-type@16.5.3:
+  version "16.5.3"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.3.tgz#474b7e88c74724046abb505e9b8ed4db30c4fc06"
+  integrity sha512-uVsl7iFhHSOY4bEONLlTK47iAHtNsFHWP5YE4xJfZ4rnX7S1Q3wce09XgqSC7E/xh8Ncv/be1lNoyprlUH/x6A==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
-    strtok3 "6.1.3"
-    token-types "^3.0.0"
+    strtok3 "^6.2.4"
+    token-types "^4.1.1"
 
 fill-range@^4.0.0:
   version "4.0.0"
@@ -6188,28 +6183,28 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.4.0.tgz#f9e05459ac478bf9890e8c235869e049e6b1d1fa"
-  integrity sha512-DZbOIqDjZ5i67dLX/mww1Ibq5FxPrF3hOI14STrnB/vi5r9LJ7SHXJseh2EY+oujI4A8taGS063giAOzmIyIYg==
+music-metadata-browser@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.4.2.tgz#fb7a55f2ff8f3f426400cd6efb33f7a05d2a88bc"
+  integrity sha512-Hke4AdDssJNXygiJ+pjeyS5aRPhj+dJ9ZiU8qwd+pUzXBZNDGoS41bxKpQ7ITn/mKI5Uq1LTxFM812J7MDUHjA==
   dependencies:
     buffer "^6.0.3"
     debug "^4.3.2"
-    music-metadata "^7.11.0"
+    music-metadata "^7.11.2"
     readable-stream "^3.6.0"
     readable-web-to-node-stream "^3.0.2"
 
-music-metadata@^7.11.0:
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.11.0.tgz#86fd06e42955b31cda4eb785fc7fed405e9d7a17"
-  integrity sha512-mDS6tZt0csbKCpWJcUlyjv5OIYUHnDDLm7phwRmVT/2jSPxHjvwZwUOx2/dD+uH5n2XGTB0iAqWNtmZJO4L3Hw==
+music-metadata@^7.11.2:
+  version "7.11.2"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.11.2.tgz#f1de17c2c97e7fc9cbbac90f3450f6327dde57c5"
+  integrity sha512-3y7rAOYXJUPwc4QglSlx0qkifE4+RrmlLTPBhFXnqtCM3T2t2ol8kJF/FpuX4wAL7da03k41KURe2rCJyMml7Q==
   dependencies:
     content-type "^1.0.4"
     debug "^4.3.2"
-    file-type "16.5.2"
+    file-type "16.5.3"
     media-typer "^1.1.0"
-    strtok3 "^6.2.2"
-    token-types "^4.1.0"
+    strtok3 "^6.2.4"
+    token-types "^4.1.1"
 
 mute-stream@0.0.8:
   version "0.0.8"
@@ -6896,15 +6891,10 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-peek-readable@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-3.1.4.tgz#f5c3b41a4eeb63a1322c4131f0b5bac7105b892e"
-  integrity sha512-DX7ec7frSMtCWw+zMd27f66hcxIz/w9LQTY2RflB4WNHCVPAye1pJiP2t3gvaaOhu7IOhtPbHw8MemMj+F5lrg==
-
-peek-readable@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-4.0.0.tgz#b024ef391c86136eba0ae9df3ff4f966a09e9a7e"
-  integrity sha512-kLbU4cz6h86poGVBKgAVMpFmD47nX04fPPQNKnv9fuj+IJZYkEBjsYAVu5nDbZWx0ZsWwWlMzeG90zQa5KLBaA==
+peek-readable@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-4.0.1.tgz#9a045f291db254111c3412c1ce4fec27ddd4d202"
+  integrity sha512-7qmhptnR0WMSpxT5rMHG9bW/mYSR1uqaPFj2MHvT+y/aOUu6msJijpKt5SkTDKySwg65OWG2JwTMBlgcbwMHrQ==
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -8650,20 +8640,13 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-strtok3@6.1.3:
-  version "6.1.3"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-6.1.3.tgz#488fe8ca91664cf93432c94752ba9e5c785bd9dd"
-  integrity sha512-ssWSKFOeUTurMSucgyUf+a6Z9mVTYrsYiyEK5RLnh8BM6sFrKSljVlnjZXIDxMguYfdQI+mUPFHo88FYTxq1XA==
+strtok3@^6.2.4:
+  version "6.2.4"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-6.2.4.tgz#302aea64c0fa25d12a0385069ba66253fdc38a81"
+  integrity sha512-GO8IcFF9GmFDvqduIspUBwCzCbqzegyVKIsSymcMgiZKeCfrN9SowtUoi8+b59WZMAjIzVZic/Ft97+pynR3Iw==
   dependencies:
-    "@tokenizer/token" "^0.1.1"
-    peek-readable "^3.1.4"
-
-strtok3@^6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-6.2.2.tgz#aad1da5fc28bf10d603c367c2a7f9f47a6c1d2d9"
-  integrity sha512-iUzLl3UhF2RfqQah80JngnfltQFLEidGyTX8+hHFMQFjzUj3UpIpOx824FtFmRI9bwyywReENpdHGDkFJwJlGQ==
-  dependencies:
-    peek-readable "^4.0.0"
+    "@tokenizer/token" "^0.3.0"
+    peek-readable "^4.0.1"
 
 style-loader@2.0.0:
   version "2.0.0"
@@ -8957,19 +8940,12 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
-token-types@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/token-types/-/token-types-3.1.0.tgz#df3902b514ba7573d8c6a2c0a6f69d1ac6a6f544"
-  integrity sha512-WhoeIW7UTn7NC7L0t/4x3vU/YYSS1oeUxYgiGXQLd82Kaf1qtlxOex3ETY0+o2QuRgAdyursMlUhQBKDCfMUkQ==
+token-types@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/token-types/-/token-types-4.1.1.tgz#ef9e8c8e2e0ded9f1b3f8dbaa46a3228b113ba1a"
+  integrity sha512-hD+QyuUAyI2spzsI0B7gf/jJ2ggR4RjkAo37j3StuePhApJUwcWDjnHDOFdIWYSwNR28H14hpwm4EI+V1Ted1w==
   dependencies:
-    "@tokenizer/token" "^0.1.1"
-    ieee754 "^1.2.1"
-
-token-types@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/token-types/-/token-types-4.1.0.tgz#63398cb6fbbf8845538cabb8ecb47bdeca5956de"
-  integrity sha512-2JV21LhBx3WsTveWcXp20SDo0/fQ2TK2RFcFBIRDvkOIy6+E79n+rqMuvolqyuWPgYazCrHXWpE0OxRj43nb9Q==
-  dependencies:
+    "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
 
 tough-cookie@~2.4.3:
