@@ -1,9 +1,8 @@
-[![CircleCI](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master.svg?style=shield)](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master)
-[![Build Status](https://travis-ci.org/Borewit/audio-tag-analyzer.svg?branch=master)](https://travis-ci.org/Borewit/audio-tag-analyzer)
-[![Known Vulnerabilities](https://snyk.io/test/github/Borewit/music-metadata/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Borewit/music-metadata?targetFile=package.json)
-[![Dependencies](https://david-dm.org/Borewit/audio-tag-analyzer.svg)](https://david-dm.org/Borewit/audio-tag-analyzer)
-[![DeepScan grade](https://deepscan.io/api/teams/5165/projects/7013/branches/64186/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5165&pid=7013&bid=64186)
+[![Build web application](https://github.com/Borewit/audio-tag-analyzer/actions/workflows/nodejs-ci.yml/badge.svg)](https://github.com/Borewit/audio-tag-analyzer/actions/workflows/nodejs-ci.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9abc66aa-e5de-4b3a-b69a-04e967aa7978/deploy-status)](https://app.netlify.com/sites/audio-tag-analyzer/deploys)
+[![CircleCI](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master.svg?style=shield)](https://circleci.com/gh/Borewit/audio-tag-analyzer/tree/master)
+[![Known Vulnerabilities](https://snyk.io/test/github/Borewit/music-metadata/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Borewit/music-metadata?targetFile=package.json)
+[![DeepScan grade](https://deepscan.io/api/teams/5165/projects/7013/branches/64186/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5165&pid=7013&bid=64186)
 
 # Audio Tag Analyzer
 
