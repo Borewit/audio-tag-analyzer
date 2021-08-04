@@ -3,8 +3,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import * as createDebug from 'debug';
 
-localStorage.debug = 'audio-tag-analyzer:*,-music-metadata:*';
+const debug = createDebug('audio-tag-analyzer:app');
+
+localStorage.debug = '-sockjs-client:*,*';
+
+createDebug('Logging enabled');
 
 if (environment.production) {
   enableProdMode();

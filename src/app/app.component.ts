@@ -1,11 +1,11 @@
-import {Component, NgZone} from '@angular/core';
+import { Component } from '@angular/core';
 import * as mm from 'music-metadata-browser';
 
 import * as createDebug from 'debug';
 
-import {commonLabels, formatLabels, TagLabel} from './format-tags';
+import { commonLabels, formatLabels, TagLabel } from './format-tags';
 
-const debug = createDebug('audio-tag-analyzer');
+const debug = createDebug('audio-tag-analyzer?');
 
 interface IValue {
   text: string;
@@ -41,7 +41,7 @@ const logos = [
   'https://upload.wikimedia.org/wikipedia/commons/0/02/Opus_logo2.svg',
   'https://upload.wikimedia.org/wikipedia/commons/8/8d/Xiph.Org_logo_square.svg',
   'https://upload.wikimedia.org/wikipedia/commons/7/76/Windows_Media_Player_simplified_logo.svg',
-  'http://www.wavpack.com/wavpacklogo.svg'
+  'https://www.wavpack.com/wavpacklogo.svg'
 ];
 
 @Component({
@@ -63,7 +63,7 @@ export class AppComponent {
 
   public logos = logos;
 
-  public nativeTags: {type: string, tags: {id: string, value: string}[]}[] = [];
+  public nativeTags: { type: string, tags: { id: string, value: string }[] }[] = [];
 
   public version = {
     app: require('../../package.json').version,
@@ -71,7 +71,7 @@ export class AppComponent {
     mm: require('../../node_modules/music-metadata/package.json').version
   };
 
-  constructor(private zone: NgZone) {
+  constructor() {
   }
 
   public async handleFilesDropped(files: File[]) {
@@ -96,7 +96,7 @@ export class AppComponent {
   }
 
   public handleFilesLeave(event) {
-    console.log('handleFilesLeave', event);
+    debug('handleFilesLeave', event);
   }
 
   private prepareTags(labels: TagLabel[], tags): ITagText[] {
@@ -116,7 +116,7 @@ export class AppComponent {
     );
   }
 
-  private prepareNativeTags(tags): {type: string, tags: {id: string, value: string}[]}[] {
+  private prepareNativeTags(tags): { type: string, tags: { id: string, value: string }[] }[] {
     return Object.keys(tags).map(type => {
       return {
         type,
@@ -125,7 +125,7 @@ export class AppComponent {
     });
   }
 
-  private parseUsingHttp(url: string): Promise<void> {
+  private async parseUsingHttp(url: string) {
     debug('Converting HTTP to stream using: ' + url);
 
     const file: IUrlAsFile = {
@@ -138,48 +138,39 @@ export class AppComponent {
     };
     this.results.push(result);
 
-    return mm.fetchFromUrl(url).then(metadata => {
-
-      this.zone.run(() => {
-
-        debug('Completed parsing of %s:', file.name, metadata);
-        result.metadata = metadata;
-        this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
-        this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
-        this.nativeTags = this.prepareNativeTags(metadata.native);
-      });
-    }).catch(err => {
-      this.zone.run<void>(() => {
-        debug('Error: ' + err.message);
-        result.parseError = err.message;
-      });
-    }) as any;
+    try {
+      const metadata = await mm.fetchFromUrl(url);
+      debug('Completed parsing of %s:', file.name, metadata);
+      result.metadata = metadata;
+      this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
+      this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
+      this.nativeTags = this.prepareNativeTags(metadata.native);
+    } catch (err) {
+      debug('Error: ' + err.message);
+      result.parseError = err.message;
+    }
   }
 
-  private parseFile(file: File): Promise<void> {
+  private async parseFile(file: File) {
     const t0 = new Date().getTime();
     debug('Parsing %s of type %s', file.name, file.type);
     const result: IFileAnalysis = {
       file
     };
     this.results.push(result);
-    return mm.parseBlob(file).then(metadata => {
+    try {
+      const metadata = await mm.parseBlob(file);
       const t1 = new Date().getTime();
       const duration = t1 - t0;
       debug(`Parsing took ${duration} ms`);
-      this.zone.run(() => {
-        debug('Completed parsing of %s:', file.name, metadata);
-        result.metadata = metadata;
-        this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
-        this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
-        this.nativeTags = this.prepareNativeTags(metadata.native);
-      });
-    }).catch(err => {
-      this.zone.run<void>(() => {
-        debug('Error: ' + err.message);
-        result.parseError = err.message;
-      });
-    });
+      debug('Completed parsing of %s:', file.name, metadata);
+      result.metadata = metadata;
+      this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
+      this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
+      this.nativeTags = this.prepareNativeTags(metadata.native);
+    } catch (err) {
+      debug(err);
+      result.parseError = err.message;
+    }
   }
-
 }
