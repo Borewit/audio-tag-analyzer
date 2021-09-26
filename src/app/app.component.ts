@@ -74,6 +74,10 @@ export class AppComponent {
   constructor() {
   }
 
+  public async handleFileSelected(event) {
+    await this.handleFilesDropped(event.target.files);
+  }
+
   public async handleFilesDropped(files: File[]) {
     this.results = []; // initialize results
     debug('handleFilesDropped', files);
