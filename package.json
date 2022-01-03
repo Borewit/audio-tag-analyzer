@@ -23,7 +23,7 @@
     "angular-pipes": "^10.0.0",
     "bootstrap": "4.6.0",
     "buffer": "^6.0.3",
-    "core-js": "^3.18.0",
+    "core-js": "^3.20.2",
     "debug": "^4.3.2",
     "drag-drop": "^7.2.0",
     "jquery": "1.9.1 - 3",
