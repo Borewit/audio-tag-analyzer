@@ -6158,22 +6158,23 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-music-metadata-browser@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.5.3.tgz#70a3c777676e161be5e73cff27d9f64e9c260e5b"
-  integrity sha512-xJ+Tv7PaheckF0/DdfzR+4M3HfXFTeDxJ0TsN55lKhtM4ACKqmFnTDyCr348ZFDSDYhYR57Kq3XLoeGs8byFqw==
+music-metadata-browser@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.5.4.tgz#31bb6a084a23d21833d23e58f5fc881acedd3a38"
+  integrity sha512-ehqKVPFQyyO2l9FtQ/xKd5N4x4JFb4wAk0JqAZ7ryeOaK/7ji0qSk8D33u9Qu4uDA/TC7kzI6tqkN3JyOgBdkg==
   dependencies:
     buffer "^6.0.3"
     debug "^4.3.3"
-    music-metadata "^7.11.7"
+    music-metadata "^7.11.8"
     readable-stream "^3.6.0"
     readable-web-to-node-stream "^3.0.2"
 
-music-metadata@^7.11.7:
-  version "7.11.7"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.11.7.tgz#95051a6a62a94390985a20c49e2207f5b1cfd898"
-  integrity sha512-Ma1/eehmRFLOTCrUr/CuOA3ob7IbK9eCEDlGetqKAtaGj4wvMsQFu2YFwK6QyGPiJdPdbESVOxnPg8uRv3zZeg==
+music-metadata@^7.11.8:
+  version "7.11.8"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.11.8.tgz#be67ff6d5e5499d2a31a7044079cb83c03544cc2"
+  integrity sha512-KaJzxDlYId05zN029WaKhJYcT5FB0QmTRSGDq5bRfPTBUw4Hl0VvJvaO5C5mm0ATWMREecMANV9YUatLMg+0Mg==
   dependencies:
+    "@tokenizer/token" "^0.3.0"
     content-type "^1.0.4"
     debug "^4.3.3"
     file-type "16.5.3"
