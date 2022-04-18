@@ -38,7 +38,7 @@
     "@angular-devkit/build-angular": "~0.1102.14",
     "@angular/cli": "^11.2.14",
     "@angular/compiler-cli": "^11.2.14",
-    "@angular/language-service": "^12.2.2",
+    "@angular/language-service": "^13.3.3",
     "@tokenizer/token": "^0.3.0",
     "@types/jasmine": "~3.10.3",
     "@types/jasminewd2": "~2.0.10",
