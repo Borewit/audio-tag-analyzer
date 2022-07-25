@@ -9,7 +9,7 @@ const debug = createDebug('audio-tag-analyzer:app');
 
 localStorage.debug = '-sockjs-client:*,*';
 
-createDebug('Logging enabled');
+debug('Logging enabled');
 
 if (environment.production) {
   enableProdMode();
