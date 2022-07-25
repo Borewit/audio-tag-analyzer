@@ -125,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "audio-tag-analyzer",
   "cli": {
     "analytics": false,
     "schematicCollections": [
