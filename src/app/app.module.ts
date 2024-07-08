@@ -1,17 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
+// import filepond module
+import { FilePondModule } from 'ngx-filepond';
 
-import { AppComponent } from './app.component';
-import { DragAndDropBoxComponent } from './drag-and-drop-box/drag-and-drop-box.component';
-import { NgBytesPipeModule } from 'angular-pipes';
+import {AppComponent} from './app.component';
 
-@NgModule({ declarations: [
-        AppComponent,
-        DragAndDropBoxComponent
-    ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        FormsModule,
-        NgBytesPipeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
-export class AppModule { }
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [AppComponent],
+  imports: [BrowserModule, FormsModule, FilePondModule],
+  providers: [provideHttpClient(withInterceptorsFromDi())]
+})
+export class AppModule {
+}
