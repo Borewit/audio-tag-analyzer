@@ -13,71 +13,67 @@
   </div>
 
   <footer class="blockquote-footer">
-    <a href="https://github.com/Borewit/audio-tag-analyzer">Audio-Tag-Analyzer</a> v{{version.app}} |
-    <a href="https://github.com/Borewit/music-metadata-browser">music-metadata-browser</a> v{{version.mmb}} |
-    <a href="https://github.com/Borewit/music-metadata">music-metadata</a> v{{version.mm}}
+    <a href="https://github.com/Borewit/audio-tag-analyzer">Audio-Tag-Analyzer</a> v{{ version.app }} |
+    <a href="https://github.com/Borewit/music-metadata-browser">music-metadata-browser</a> v{{ version.mmb }} |
+    <a href="https://github.com/Borewit/music-metadata">music-metadata</a> v{{ version.mm }}
   </footer>
 
   <div class="center">
 
-    <div class="p-2">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile01"
-               aria-describedby="inputGroupFileAddon01" (change)="handleFileSelected($event)">
-        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-      </div>
-    </div>
-    <div class="p-2">
-    <app-drag-and-drop-box class="p-2" (emitDropFiles)="handleFilesDropped($event)"
-                           (emitEnterFiles)="handleFilesEnter($event)"
-                           (emitLeaveFiles)="handleFilesLeave($event)"
-                           (emitDropText)="handleTextDropped($event)">
-      <h3>Drop your audio files here</h3>
-      <hr class="my-4">
-      <p>Dropped files will stay within your local browser. They will not be uploaded anywhere else.</p>
-    </app-drag-and-drop-box>
+
+    <div class="col-md-12">
+      <file-pond #myPond
+                 [options]="pondOptions"
+                 [files]="pondFiles"
+                 (oninit)="pondHandleInit()"
+                 (onaddfile)="pondHandleAddFile($event)"
+                 (onactivatefile)="pondHandleActivateFile($event)"
+                 (onremovefile)="pondHandleRemoveFile($event)">
+      </file-pond>
     </div>
 
-    <div *ngFor="let upload of results">
+    <div *ngIf="result">
 
       <h2>File information</h2>
       <table class="table">
         <tr>
           <td class="text-right">Name</td>
-          <td>{{ upload.file.name }}</td>
+          <td>{{ result.file.name }}</td>
         </tr>
         <tr>
           <td class="text-right">File type</td>
-          <td>{{ upload.file.type }}</td>
+          <td>{{ result.file.type }}</td>
         </tr>
         <tr>
           <td class="text-right">Size</td>
-          <td>{{ upload.file.size | bytes}}</td>
+          <td>{{ result.file.size }}</td>
         </tr>
         <tr>
           <td class="text-right">Last modified</td>
-          <td>{{ upload.file.lastModifiedDate }}</td>
+          <td>{{ result.file.lastModifiedDate }}</td>
         </tr>
       </table>
 
-      <div *ngIf="!upload.metadata && !upload.parseError" class="alert alert-info">
+      <div *ngIf="!result.metadata && !result.parseError" class="alert alert-info">
         Parsing...
       </div>
 
-      <div *ngIf="upload.metadata">
+      <div *ngIf="result.metadata">
         <h2>Quality information</h2>
-        <div *ngIf="upload.metadata && upload.metadata.quality.warnings.length > 0">
+        <div *ngIf="result.metadata && result.metadata.quality.warnings.length > 0">
           <h2>Parser warnings</h2>
-          <div *ngFor="let warning of upload.metadata.quality.warnings" class="alert alert-warning">{{warning.message}}</div>
+          <div *ngFor="let warning of result.metadata.quality.warnings"
+               class="alert alert-warning">{{ warning.message }}
+          </div>
         </div>
-        <div *ngIf="upload.metadata && upload.metadata.quality.warnings.length === 0">
+        <div *ngIf="result.metadata && result.metadata.quality.warnings.length === 0">
           <div class="alert alert-success">No issues found</div>
         </div>
       </div>
 
-      <div *ngIf="upload.parseError" class="alert alert-danger">
-        <p>Failed to parse <i>{{ upload.file.name }}</i>.
-        <p>Error message: {{ upload.parseError }}.</p>
+      <div *ngIf="result.parseError" class="alert alert-danger">
+        <p>Failed to parse <i>{{ result.file.name }}</i>.
+        <p>Error message: {{ result.parseError }}.</p>
         <p>If you believe this is a bug, please <a target="_blank"
                                                    href="https://github.com/Borewit/audio-tag-analyzer/issues">open an
           issue here</a>.<br/>
@@ -85,11 +81,11 @@
         </p>
       </div>
 
-      <div *ngIf="upload.metadata">
-        <div *ngIf="upload.metadata.common.picture">
+      <div *ngIf="result.metadata">
+        <div *ngIf="result.metadata.common.picture">
           <h3>Embedded cover art</h3>
-          <div *ngFor="let picture of upload.metadata.common.picture" class="media col-md-8">
-            <img src="data:{{ picture.format }};base64,{{picture.data.toString('base64')}}" class="img-thumbnail">
+          <div *ngFor="let picture of result.metadata.common.picture" class="media col-md-8">
+            <img alt="embedded cover" src="data:{{ picture.format }};base64,{{base64Encode(picture.data)}}" class="img-thumbnail">
             <div class="media-body">
               <table class="table">
                 <tr>
@@ -120,16 +116,17 @@
               <th>Property name</th>
             </tr>
             <tr *ngFor="let tag of tagList.tags">
-              <td class="text-right"><a *ngIf="tag.label.ref" target="_blank" [href]="tag.label.ref">{{tag.label.text}}</a><span
-                *ngIf="!tag.label.ref">{{tag.label.text}}</span></td>
+              <td class="text-right"><a *ngIf="tag.label.ref" target="_blank"
+                                        [href]="tag.label.ref">{{ tag.label.text }}</a><span
+                *ngIf="!tag.label.ref">{{ tag.label.text }}</span></td>
               <td>
                 <span *ngFor="let v of tag.value; let first = first;">
                   <span *ngIf="!first">, </span>
-                  <a *ngIf="v.ref" target="_blank" [href]="v.ref">{{v.text}}</a>
-                  <span *ngIf="!v.ref">{{v.text}}</span>
+                  <a *ngIf="v.ref" target="_blank" [href]="v.ref">{{ v.text }}</a>
+                  <span *ngIf="!v.ref">{{ v.text }}</span>
                 </span>
               </td>
-              <td>{{tag.key}}</td>
+              <td>{{ tag.key }}</td>
             </tr>
           </table>
 
@@ -147,7 +144,7 @@
               <th>Value</th>
             </tr>
             <tr *ngFor="let tag of type.tags">
-              <td class="text-right">{{tag.id }}</td>
+              <td class="text-right">{{ tag.id }}</td>
               <td>{{ tag.value }}</td>
             </tr>
           </table>
@@ -155,7 +152,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
 </div>

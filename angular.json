@@ -24,8 +24,9 @@
               "src/browserconfig.xml"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/filepond/dist/filepond.min.css",
+              "./src/styles.css"
             ],
             "scripts": [],
             "vendorChunk": true,
@@ -55,7 +56,11 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "outputPath": "",
+              "index":,
+              "main": "",
+              "tsConfig": ""
             }
           },
           "defaultConfiguration": ""
@@ -125,7 +130,6 @@
       }
     }
   },
-  "defaultProject": "audio-tag-analyzer",
   "cli": {
     "analytics": false,
     "schematicCollections": [

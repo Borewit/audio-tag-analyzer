@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-import * as mm from 'music-metadata-browser';
-
-import * as createDebug from 'debug';
+import {Component, ViewChild} from '@angular/core';
+import * as mm from 'music-metadata';
 
 import { commonLabels, formatLabels, TagLabel } from './format-tags';
-
-const debug = createDebug('audio-tag-analyzer?');
+import {FilePondOptions} from "filepond";
+import {FilePondComponent} from "ngx-filepond";
+import {uint8ArrayToBase64} from "uint8array-extras";
 
 interface IValue {
   text: string;
@@ -24,6 +23,7 @@ interface IUrlAsFile {
 }
 
 interface IFileAnalysis {
+  fileId: string;
   file: File | IUrlAsFile;
   metadata?: mm.IAudioMetadata;
   parseError?: Error;
@@ -51,7 +51,10 @@ const logos = [
 })
 export class AppComponent {
 
-  public results: IFileAnalysis[];
+  @ViewChild('myPond') myPond: FilePondComponent
+
+  private results: { [id: string]: IFileAnalysis } = {};
+  public result: IFileAnalysis;
 
   public tagLists: ITagList[] = [{
     title: 'Format',
@@ -67,40 +70,43 @@ export class AppComponent {
 
   public version = {
     app: require('../../package.json').version,
-    mmb: require('../../node_modules/music-metadata-browser/package.json').version,
+    mmb: require('../../node_modules/music-metadata/package.json').version,
     mm: require('../../node_modules/music-metadata/package.json').version
   };
+
+  pondOptions: FilePondOptions = {
+    allowMultiple: true,
+    labelIdle: 'Drop your audio files here...'
+  }
+
+  pondFiles: FilePondOptions["files"] = []
 
   constructor() {
   }
 
-  public async handleFileSelected(event) {
-    await this.handleFilesDropped(event.target.files);
+  public pondHandleInit() {
+    console.log('FilePond has initialised', this.myPond);
   }
 
-  public async handleFilesDropped(files: File[]) {
-    this.results = []; // initialize results
-    debug('handleFilesDropped', files);
-    for (const file of files) {
-      debug('Start parsing file %s', file.name);
-      await this.parseFile(file);
+  public pondHandleAddFile(event: any) {
+    if (event?.file) {
+      console.info(`A file was added id=${event.file.id}`);
+      this.parseFile(event.file.id, event.file.file);
     }
   }
 
-  public handleTextDropped(text) {
-    this.results = []; // initialize results
-    if (text.indexOf('http') === 0) {
-      return this.parseUsingHttp(text);
-    } else {
-    }
+  public pondHandleRemoveFile(event: any) {
+    console.info(`File id=${event.file.id} was removed`);
+    delete this.results[event.file.id]
   }
 
-  public handleFilesEnter(event) {
-    debug('handleFilesEnter', event);
+  public pondHandleActivateFile(event: any) {
+    console.info(`File id=${event.file.id} was activated`);
+    this.result = this.results[event.file.id];
   }
 
-  public handleFilesLeave(event) {
-    debug('handleFilesLeave', event);
+  public base64Encode(buffer: Uint8Array): string {
+    return uint8ArrayToBase64(buffer)
   }
 
   private prepareTags(labels: TagLabel[], tags): ITagText[] {
@@ -129,51 +135,27 @@ export class AppComponent {
     });
   }
 
-  private async parseUsingHttp(url: string) {
-    debug('Converting HTTP to stream using: ' + url);
-
-    const file: IUrlAsFile = {
-      name: url,
-      type: '?'
-    };
-
-    const result: IFileAnalysis = {
-      file
-    };
-    this.results.push(result);
-
-    try {
-      const metadata = await mm.fetchFromUrl(url);
-      debug('Completed parsing of %s:', file.name, metadata);
-      result.metadata = metadata;
-      this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
-      this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
-      this.nativeTags = this.prepareNativeTags(metadata.native);
-    } catch (err) {
-      debug('Error: ' + err.message);
-      result.parseError = err.message;
-    }
-  }
-
-  private async parseFile(file: File) {
+  private async parseFile(fileId: string, file: File) {
     const t0 = new Date().getTime();
-    debug('Parsing %s of type %s', file.name, file.type);
+    console.info('Parsing %s of type %s, id=%s', file.name, file.type, fileId);
     const result: IFileAnalysis = {
+      fileId,
       file
     };
-    this.results.push(result);
+    this.results[fileId] = result;
+    this.result = result;
     try {
       const metadata = await mm.parseBlob(file);
       const t1 = new Date().getTime();
       const duration = t1 - t0;
-      debug(`Parsing took ${duration} ms`);
-      debug('Completed parsing of %s:', file.name, metadata);
+      console.debug(`Parsing took ${duration} ms`);
+      console.debug('Completed parsing of %s:', file.name, metadata);
       result.metadata = metadata;
       this.tagLists[0].tags = this.prepareTags(formatLabels, metadata.format);
       this.tagLists[1].tags = this.prepareTags(commonLabels, metadata.common);
       this.nativeTags = this.prepareNativeTags(metadata.native);
     } catch (err) {
-      debug(err);
+      console.error(err);
       result.parseError = err.message;
     }
   }
