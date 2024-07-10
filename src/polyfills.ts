@@ -38,16 +38,6 @@ import '@angular/localize/init';
 // import 'core-js/es6/weak-map';
 // import 'core-js/es6/set';
 
-(window as any).global = window;
-
-/** IE10 and IE11 requires the following for the Reflect API. */
-// import 'core-js/es6/reflect';
-
-
-/** Evergreen browsers require these. **/
-// Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
-import 'core-js/es7/reflect';
-
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags

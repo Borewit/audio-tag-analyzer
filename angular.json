@@ -57,10 +57,10 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "outputPath": "",
-              "index":,
-              "main": "",
-              "tsConfig": ""
+              "outputPath": "dist/audio-tag-analyzer",
+              "index": "src/index.html",
+              "main": "src/main.ts",
+              "tsConfig": "src/tsconfig.app.json"
             }
           },
           "defaultConfiguration": ""

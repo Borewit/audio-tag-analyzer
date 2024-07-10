@@ -70,7 +70,6 @@ export class AppComponent {
 
   public version = {
     app: require('../../package.json').version,
-    mmb: require('../../node_modules/music-metadata/package.json').version,
     mm: require('../../node_modules/music-metadata/package.json').version
   };
 

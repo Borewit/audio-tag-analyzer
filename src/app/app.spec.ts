@@ -1,17 +1,13 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import {DragAndDropBoxComponent} from './drag-and-drop-box/drag-and-drop-box.component';
-import { NgMathPipesModule } from 'angular-pipes';
+
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent,
-        DragAndDropBoxComponent
+        AppComponent
       ],
-      imports: [
-        NgMathPipesModule,
-      ],
+      imports: [],
     }).compileComponents();
   }));
 
