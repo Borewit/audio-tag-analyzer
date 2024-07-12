@@ -30,7 +30,7 @@
     "ngx-filepond": "^7.0.3",
     "popper.js": "^1.16.1",
     "process": "^0.11.10",
-    "rxjs": "^6.6.7",
+    "rxjs": "^7.8.1",
     "tslib": "^2.3.1",
     "uint8array-extras": "^1.3.0",
     "zone.js": "^0.14.7"
