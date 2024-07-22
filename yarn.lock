@@ -6453,10 +6453,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-9.0.2.tgz#13c69bf20e9f9dd00323d3a404d577186e143fcc"
-  integrity sha512-KRHocFQbwb08CXOTUhoCsQ8Y7m5WSG4zAJpYqkim/NO7lgrNTYF7AxuRMtOvhRt37fcr3VB7qSkIjpLIXNVdFQ==
+music-metadata@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.0.0.tgz#10ea1d6998e5cc5463d2024c7d40ecb19869567e"
+  integrity sha512-/JJ9nubnGdZY/teJR4KgPsDCMd4DejnGTvRRWGmyfTly8aGHqmpFa5q3j/xV5I/vE+n1aXA8Q/JqCq7J79vJFg==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
