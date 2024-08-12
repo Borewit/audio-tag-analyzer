@@ -19,4 +19,10 @@ updates:
         update-types:
           - "minor"
           - "patch"
+      typescript-eslint:
+        applies-to: version-updates
+        patterns:
+          - "@angular/*"
+          - "typescript-eslint/*"
+
 
