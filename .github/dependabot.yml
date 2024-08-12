@@ -5,8 +5,18 @@ updates:
     schedule:
       interval: weekly
       time: "04:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 25
     versioning-strategy: increase
     ignore:
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-patch"]
+    groups:
+      angular:
+        applies-to: version-updates
+        patterns:
+          - "@angular/*"
+          - "@angular-eslint/"
+        update-types:
+          - "minor"
+          - "patch"
+
