@@ -15,7 +15,7 @@ updates:
         applies-to: version-updates
         patterns:
           - "@angular/*"
-          - "@angular-eslint/"
+          - "@angular-eslint/*"
         update-types:
           - "minor"
           - "patch"
