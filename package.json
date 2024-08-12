@@ -26,7 +26,7 @@
     "bootstrap": "4.6.2",
     "core-js": "^3.37.1",
     "filepond": "^4.31.1",
-    "music-metadata": "^9.0.2",
+    "music-metadata": "^10.1.0",
     "ngx-filepond": "^7.0.3",
     "popper.js": "^1.16.1",
     "process": "^0.11.10",
