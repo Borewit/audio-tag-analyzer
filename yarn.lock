@@ -154,13 +154,28 @@
   resolved "https://registry.yarnpkg.com/@angular-eslint/bundled-angular-compiler/-/bundled-angular-compiler-18.2.0.tgz#6fff791ada944dc4d44b4008a6724df3d34845bc"
   integrity sha512-p/YvlvDJscSAbNOOAbT/BRdscEfWpQunUK+KuWM6/PXL07tTVae5dmp8B8A5am7Cxvp+ZVLVLZG4LFYB1TX1cw==
 
-"@angular-eslint/eslint-plugin-template@18.2.0", "@angular-eslint/eslint-plugin-template@^18.2.0":
+"@angular-eslint/bundled-angular-compiler@18.3.0":
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/bundled-angular-compiler/-/bundled-angular-compiler-18.3.0.tgz#086bf5d529e60a864bbcf3d448ccb9544bfd9b86"
+  integrity sha512-v/59FxUKnMzymVce99gV43huxoqXWMb85aKvzlNvLN+ScDu6ZE4YMiTQNpfapVL2lkxhs0uwB3jH17EYd5TcsA==
+
+"@angular-eslint/eslint-plugin-template@18.2.0":
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-18.2.0.tgz#a263568fa73fed50c7e90f837493876da50bd686"
   integrity sha512-YHh+AUY9ubLAdmIRXH8vSpv+8EQkGjdX3B9xdj/grnrVzgzu+5W86F/spGp2tEny9l85R3JZNqjaMpW/vwibfw==
   dependencies:
     "@angular-eslint/bundled-angular-compiler" "18.2.0"
     "@angular-eslint/utils" "18.2.0"
+    aria-query "5.3.0"
+    axobject-query "4.1.0"
+
+"@angular-eslint/eslint-plugin-template@^18.3.0":
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-18.3.0.tgz#137ca3934fef6f57fcc6af5810c0984a3c1f71f8"
+  integrity sha512-ddR/qwYbUeq9IpyVKrPbfZyRBTy6V8uc5I0JcBKttQ4CZ4joXhqsVgWFsI+JAMi8E66uNj1VC7NuKCOjDINv2Q==
+  dependencies:
+    "@angular-eslint/bundled-angular-compiler" "18.3.0"
+    "@angular-eslint/utils" "18.3.0"
     aria-query "5.3.0"
     axobject-query "4.1.0"
 
@@ -199,6 +214,13 @@
   integrity sha512-g+b0L4RCZaKYPz4bGRRifo7g5guVJi2kUWymlDYmCkq3NhZng1HQQbNpVF1n5o034zT5lnaC5HENwaKIZ1Y37Q==
   dependencies:
     "@angular-eslint/bundled-angular-compiler" "18.2.0"
+
+"@angular-eslint/utils@18.3.0":
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/utils/-/utils-18.3.0.tgz#4ae9ad59c04e5a3cc2f8743bd4f62d53364bc49c"
+  integrity sha512-sCrkHkpxBJZLuCikdboZoawCfc2UgbJv+T14tu2uQCv+Vwzeadnu04vkeY2vTkA8GeBdBij/G9/N/nvwmwVw3g==
+  dependencies:
+    "@angular-eslint/bundled-angular-compiler" "18.3.0"
 
 "@angular/animations@^18.1.4":
   version "18.1.4"
