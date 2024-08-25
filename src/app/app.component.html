@@ -1,24 +1,33 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
 
-  <div class="float-right mr-3">
-    <img [src]="logo" *ngFor="let logo of logos" class="img-fluid" style="height:50px;margin: 5px"/>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-auto" *ngFor="let logo of logos">
+      <img [src]="logo" class="img-fluid" style="height:40px;margin: 5px"/>
+    </div>
   </div>
-
-  <div class="media">
-    <img class="mr-3" src="assets/icon/audio-tag-analyzer.svg" alt="" width="72" height="72">
-    <div class="media-body">
+  <div class="row">
+    <div class="col-auto">
+      <img src="assets/icon/audio-tag-analyzer.svg" alt="" width="72" height="72">
+    </div>
+    <div class="col-auto">
       <h1>Audio Tag Analyzer</h1>
     </div>
   </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-6">
+      <footer class="blockquote-footer">
+        <a href="https://github.com/Borewit/audio-tag-analyzer">Audio-Tag-Analyzer</a> v{{ version.app }} |
+        <a href="https://github.com/Borewit/music-metadata">music-metadata</a> v{{ version.mm }}
+      </footer>
+    </div>
+  </div>
 
-  <footer class="blockquote-footer">
-    <a href="https://github.com/Borewit/audio-tag-analyzer">Audio-Tag-Analyzer</a> v{{ version.app }} |
-    <a href="https://github.com/Borewit/music-metadata">music-metadata</a> v{{ version.mm }}
-  </footer>
 
   <div class="center">
-
 
     <div class="col-md-12">
       <file-pond #myPond
@@ -31,7 +40,7 @@
       </file-pond>
     </div>
 
-    <div *ngIf="result">
+    <div *ngFor="let result of results">
 
       <h2>File information</h2>
       <table class="table">

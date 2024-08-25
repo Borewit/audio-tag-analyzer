@@ -53,8 +53,7 @@ export class AppComponent {
 
   @ViewChild('myPond') myPond: FilePondComponent
 
-  private results: { [id: string]: IFileAnalysis } = {};
-  public result: IFileAnalysis;
+  public results: IFileAnalysis[] = [];
 
   public tagLists: ITagList[] = [{
     title: 'Format',
@@ -96,12 +95,11 @@ export class AppComponent {
 
   public pondHandleRemoveFile(event: any) {
     console.info(`File id=${event.file.id} was removed`);
-    delete this.results[event.file.id]
+    this.results = this.results.filter(result => result.fileId != event.file.id);
   }
 
   public pondHandleActivateFile(event: any) {
     console.info(`File id=${event.file.id} was activated`);
-    this.result = this.results[event.file.id];
   }
 
   public base64Encode(buffer: Uint8Array): string {
@@ -141,8 +139,7 @@ export class AppComponent {
       fileId,
       file
     };
-    this.results[fileId] = result;
-    this.result = result;
+    this.results.push(result);
     try {
       const metadata = await mm.parseBlob(file);
       const t1 = new Date().getTime();
