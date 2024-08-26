@@ -1,11 +1,10 @@
 [build.environment]
   NODE_VERSION = "20"
-  YARN_VERSION = "1.22.22"
   ANGULAR_PROJECT = "audio-tag-analyzer"
 
 [build]
   # Default build command.
-  command = "ng build --configuration production"
+  command = "npx ng build --configuration production"
 
   publish = "dist/audio-tag-analyzer"
 
