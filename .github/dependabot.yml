@@ -17,6 +17,7 @@ updates:
         patterns:
           - "@angular/*"
           - "@angular-eslint/*"
+          - "@angular-devkit/*"
         update-types:
           - "minor"
           - "patch"
