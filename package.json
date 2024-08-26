@@ -5,12 +5,12 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration production",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "yarn run ng",
+    "start": "yarn run ng serve",
+    "build": "yarn run ng build --configuration production",
+    "test": "yarn run ng test",
+    "lint": "yarn run ng lint",
+    "e2e": "yarn run ng e2e"
   },
   "dependencies": {
     "@angular/animations": "^18.2.0",
@@ -62,5 +62,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~10.9.2",
     "typescript": "^5.5.4"
-  }
+  },
+  "packageManager": "yarn@4.4.0"
 }
