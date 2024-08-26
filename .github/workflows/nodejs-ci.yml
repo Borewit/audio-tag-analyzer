@@ -1,5 +1,11 @@
 name: Build web application
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
 
@@ -11,19 +17,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Prepare Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
+          cache: 'yarn'
 
-      - name: Install Angular client
-        run: yarn global add @angular/cli
+      - run: corepack enable yarn
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Angular code analysis
         run: yarn lint
 
       - name: Angular build
-        run: ng build
+        run: ng build --configuration=production
