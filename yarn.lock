@@ -6523,10 +6523,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.2.0.tgz#9b48b6e2bad604e0b753ffa3afbfe846c2baacc0"
-  integrity sha512-7dg9H8A6+i/m1G6Q99Its+OghBrpmePK3sGbbpItEezIsUgCZHv0uC87nhsR2USreNlyoq5/OEDjfLomx8iXhQ==
+music-metadata@^10.3.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.3.1.tgz#02c680f9ef336aa62453c7430146d7ed7e4b04d0"
+  integrity sha512-Sm25UUV21iECgVyd0oZj/KXJsNJO0B58mR7TKSIrceKDBTqbWP7A0Cr3ubIX1wLklJEb9c2tKKkb2sIiyGlfwQ==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
