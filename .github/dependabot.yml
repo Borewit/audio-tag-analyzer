@@ -13,7 +13,6 @@ updates:
     groups:
       angular:
         applies-to: version-updates
-        dependency-type: "production"
         patterns:
           - "@angular/*"
           - "@angular-eslint/*"
@@ -25,7 +24,6 @@ updates:
         applies-to: version-updates
         dependency-type: "development"
         patterns:
-          - "@angular/*"
           - "typescript-eslint/*"
       jasmine:
         applies-to: version-updates
