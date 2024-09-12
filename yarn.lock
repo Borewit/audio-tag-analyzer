@@ -3971,12 +3971,12 @@ debug@2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@~4.3.1, debug@~4.3.2, debug@~4.3.4:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.5.tgz#e83444eceb9fedd4a1da56d671ae2446a01a6e1e"
-  integrity sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.7, debug@~4.3.1, debug@~4.3.2, debug@~4.3.4:
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.7.tgz#87945b4151a011d76d95a198d7111c865c360a52"
+  integrity sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==
   dependencies:
-    ms "2.1.2"
+    ms "^2.1.3"
 
 debug@^3.1.0:
   version "3.2.7"
@@ -4715,10 +4715,10 @@ file-entry-cache@^8.0.0:
   dependencies:
     flat-cache "^4.0.0"
 
-file-type@^19.4.1:
-  version "19.4.1"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-19.4.1.tgz#97ea4561db7c8be0808fbd1caf380be0c2a65782"
-  integrity sha512-RuWzwF2L9tCHS76KR/Mdh+DwJZcFCzrhrPXpOw6MlEfl/o31fjpTikzcKlYuyeV7e7ftdCGVJTNOCzkYD/aLbw==
+file-type@^19.5.0:
+  version "19.5.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-19.5.0.tgz#c13c5eca9c1c7270f6d5fbff70331b3c976f92b5"
+  integrity sha512-dMuq6WWnP6BpQY0zYJNpTtQWgeCImSMG0BTIzUBXvxbwc1HWP/E7AE4UWU9XSCOPGJuOHda0HpDnwM2FW+d90A==
   dependencies:
     get-stream "^9.0.1"
     strtok3 "^8.1.0"
@@ -6484,12 +6484,7 @@ ms@2.0.0:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   integrity sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==
 
-ms@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
-  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-
-ms@2.1.3, ms@^2.1.1:
+ms@2.1.3, ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
@@ -6523,15 +6518,15 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^10.4.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.4.0.tgz#080883dd5bd3576ef6dd563570f1282a0bef6b59"
-  integrity sha512-osabkxcSDVtrIj4IzX91za39ewznShvnE1PXOsWU9o1ZpC5Dlxbe0PqSsVG21hpfgqHwECEb5sAHlS6TejsZRA==
+music-metadata@^10.5.0:
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.5.0.tgz#e2a3cc2ef06c8b624f4a5788c82ebdf8707b9777"
+  integrity sha512-j9KDoFzud12gKtl6+SEX4nVMzJyASZ9XtcH04kHhi5Q7sWBnH6GtzgzRFFkOVEojSctBecj9JqTDqyrTAs5kOA==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
-    debug "^4.3.4"
-    file-type "^19.4.1"
+    debug "^4.3.7"
+    file-type "^19.5.0"
     media-typer "^1.1.0"
     strtok3 "^9.0.0"
     token-types "^6.0.0"
