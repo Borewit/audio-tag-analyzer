@@ -4729,10 +4729,10 @@ filelist@^1.0.1:
   dependencies:
     minimatch "^5.0.1"
 
-filepond@^4.31.2:
-  version "4.31.2"
-  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.31.2.tgz#66e0478d03f11a71650cb5d01777682c78831fec"
-  integrity sha512-D1G8PUjXfD6va0zkhtPhCqT8k4YW1RrCpBNmhlvho1bkFihiOEQJiplHRtrh95UvjcgZYeVNwUOH9OkBDljHFg==
+filepond@^4.31.4:
+  version "4.31.4"
+  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.31.4.tgz#1ed6d8385084d71253f88fd471c875019c4c60a1"
+  integrity sha512-3kR87Rsw2OP8CktlIehdbFjWB33GEH5iLs8izl2OcZGOszUFWYTjRY6pffLpjz/gRE61u1F67rZ2++ujFiUxPQ==
 
 fill-range@^7.1.1:
   version "7.1.1"
