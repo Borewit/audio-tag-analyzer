@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^18.2.2",
     "@angular/platform-server": "^18.2.2",
     "@angular/router": "^18.2.2",
-    "bootstrap": "4.6.2",
+    "bootstrap": "5.0.0",
     "core-js": "^3.38.1",
     "filepond": "^4.31.4",
     "music-metadata": "^10.5.0",
