@@ -25,7 +25,7 @@
     "@angular/router": "^18.2.8",
     "bootstrap": "4.6.2",
     "core-js": "^3.38.1",
-    "filepond": "^4.31.4",
+    "filepond": "^4.32.0",
     "music-metadata": "^10.5.0",
     "ngx-filepond": "^7.0.3",
     "popper.js": "^1.16.1",
