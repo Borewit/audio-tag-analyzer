@@ -18,6 +18,14 @@
     "@angular-devkit/core" "18.2.8"
     rxjs "7.8.1"
 
+"@angular-devkit/architect@>= 0.1900.0 < 0.2000.0":
+  version "0.1900.4"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1900.4.tgz#ea0c187e6835685435184b6d0d868eaecb59e6a4"
+  integrity sha512-9XwZ21BPYS2vGOOwVB40fsMyuwJT0H1lWaAMo8Umwi6XbKBVfaWbEhjtR9dlarrySKtFuTz9hmTZkIXHLjXPdA==
+  dependencies:
+    "@angular-devkit/core" "19.0.4"
+    rxjs "7.8.1"
+
 "@angular-devkit/build-angular@^18.2.8":
   version "18.2.8"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-18.2.8.tgz#a3b05debf522b81dcd40639b5e658111c80313d6"
@@ -108,6 +116,18 @@
     rxjs "7.8.1"
     source-map "0.7.4"
 
+"@angular-devkit/core@19.0.4", "@angular-devkit/core@>= 19.0.0 < 20.0.0":
+  version "19.0.4"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-19.0.4.tgz#abc3835fecc57609b804ae9723ba0ebf521176d1"
+  integrity sha512-+imxIj1JLr2hbUYQePHgkTUKr0VmlxNSZvIREcCWtXUcdCypiwhJAtGXv6MfpB4hAx+FJZYEpVWeLwYOS/gW0A==
+  dependencies:
+    ajv "8.17.1"
+    ajv-formats "3.0.1"
+    jsonc-parser "3.3.1"
+    picomatch "4.0.2"
+    rxjs "7.8.1"
+    source-map "0.7.4"
+
 "@angular-devkit/schematics@18.2.8":
   version "18.2.8"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-18.2.8.tgz#ad10b81c23b353dd46cd770b0a463b7f3d126d5f"
@@ -119,10 +139,13 @@
     ora "5.4.1"
     rxjs "7.8.1"
 
-"@angular-eslint/builder@^18.3.1":
-  version "18.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-18.3.1.tgz#d883c3dabd1b377fd7c48380b6a7f24fdd0e6881"
-  integrity sha512-cPc7Ye9zDs5M4i+feL6vob+mh7yX5vxvOS5KQIhneUrp5e9D+IGuNFMmBLlOPpmklSc9XJBtuvI5Zjuh4z1ETw==
+"@angular-eslint/builder@^19.0.1":
+  version "19.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-19.0.1.tgz#7963dca52eb9bd12f9265d3c23a4c4d3de3b7587"
+  integrity sha512-+QbnGKkAetNl2/6TJxljzaTUUEjaRJ6LaCbGBeehMby9RVr3R8csRnuGZHxfdUBpsdJ1T/fOgwmImMUmpZSh4w==
+  dependencies:
+    "@angular-devkit/architect" ">= 0.1900.0 < 0.2000.0"
+    "@angular-devkit/core" ">= 19.0.0 < 20.0.0"
 
 "@angular-eslint/bundled-angular-compiler@18.3.1":
   version "18.3.1"
