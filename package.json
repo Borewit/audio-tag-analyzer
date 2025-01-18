@@ -26,7 +26,7 @@
     "bootstrap": "4.6.2",
     "core-js": "^3.39.0",
     "filepond": "^4.31.4",
-    "music-metadata": "^10.6.4",
+    "music-metadata": "^10.8.0-beta.2",
     "ngx-filepond": "^7.0.3",
     "popper.js": "^1.16.1",
     "process": "^0.11.10",
@@ -62,5 +62,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~10.9.2",
     "typescript": "^5.5.4"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
