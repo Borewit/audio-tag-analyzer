@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "audio-tag-analyzer:build"
+            "buildTarget": "audio-tag-analyzer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "audio-tag-analyzer:build:production"
+              "buildTarget": "audio-tag-analyzer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "audio-tag-analyzer:build"
+            "buildTarget": "audio-tag-analyzer:build"
           }
         },
         "test": {
