@@ -6276,10 +6276,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^10.8.1:
-  version "10.8.1"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.8.1.tgz#61aa95332b81555b0caa017153bed456f4036ef1"
-  integrity sha512-Ge4BRuywe3aezzGikRX/wPgJNuQIxJ/dFQ+H2GMouVHJCuXUWBmgfFD1C9pJryaIEVLVnlq8GAImZoMKmB8nNg==
+music-metadata@^10.8.2:
+  version "10.8.2"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-10.8.2.tgz#1c21b8bbddbf51a5fd5c113f1362c325bb064c38"
+  integrity sha512-xQmeWG8DGhKEHutBywjMPLPaU6GAHyzp3dqcW3QS9stlGndG4XW2s2/Deuxvj/oPqtMgIK9e15KEX4V5Zl1vqQ==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
@@ -6287,7 +6287,7 @@ music-metadata@^10.8.1:
     file-type "^19.6.0"
     link "^2.1.1"
     media-typer "^1.1.0"
-    strtok3 "^10.1.2"
+    strtok3 "^10.2.0"
     token-types "^6.0.0"
     uint8array-extras "^1.4.0"
 
@@ -6798,10 +6798,10 @@ peek-readable@^5.3.1:
   resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-5.3.1.tgz#9cc2c275cceda9f3d07a988f4f664c2080387dff"
   integrity sha512-GVlENSDW6KHaXcd9zkZltB7tCLosKB/4Hg0fqBJkAoBgYG2Tn1xtMgXtSUuMU9AK/gCm/tTdT8mgAeF4YNeeqw==
 
-peek-readable@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-6.0.2.tgz#35e704b8ad0576b41a4ba0f3c32cbcf53bac83fe"
-  integrity sha512-XDaPdoABVmcY4PzDFAEBbCvdu8daWWMrCsDkCgMLqPHNFoXqUvGsfeBF6fndW5WUrh535psyZqOX4UfwMczrpw==
+peek-readable@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-6.1.0.tgz#d0bf6631d1e76a3df3c517ba9ea963ea920669f1"
+  integrity sha512-1H5ECS+rPH35Foh4JD/XohQKWsx6Jzn37ESOVTFuCSoI8wMB9r2e2aDSLgHSiyucVrPfoc0DRiipBEP1gr9wLw==
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -7966,13 +7966,13 @@ strip-json-comments@3.1.1, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-strtok3@^10.1.2:
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-10.1.2.tgz#30ce4ec6cced7d7987cfaef7816efce86515ed2a"
-  integrity sha512-Q3Qy7kKhJ69xNXHE0Os0zCGne+Myz6h0kcBqlic2RxAcikt/XT01DSNBAA46DWwgVmguABGg6UtzBu4uS8eAQg==
+strtok3@^10.2.0:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-10.2.0.tgz#bd6b14423c12effbe29e70a24bec68c969a6f861"
+  integrity sha512-S884oIGzokq3LkL/6jXw5c5oJXRiGt4jB42cuWdaooJdxFMSn99snaShh3cQmJx3jALV2eoyW3rV/TJxwOaBPA==
   dependencies:
     "@tokenizer/token" "^0.3.0"
-    peek-readable "^6.0.2"
+    peek-readable "^6.1.0"
 
 strtok3@^9.0.1:
   version "9.1.1"
