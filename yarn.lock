@@ -4645,10 +4645,10 @@ file-type@^19.6.0:
     token-types "^6.0.0"
     uint8array-extras "^1.3.0"
 
-filepond@^4.31.4:
-  version "4.31.4"
-  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.31.4.tgz#1ed6d8385084d71253f88fd471c875019c4c60a1"
-  integrity sha512-3kR87Rsw2OP8CktlIehdbFjWB33GEH5iLs8izl2OcZGOszUFWYTjRY6pffLpjz/gRE61u1F67rZ2++ujFiUxPQ==
+filepond@^4.32.7:
+  version "4.32.7"
+  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.32.7.tgz#5dc10d1ffeefa806aab6a4e5b0fe27a686db5318"
+  integrity sha512-L2idUfC31Qb2ZuFn8yAjX+Km6Ouq0kQn6JHcwhqrl5Ee9cB7xctLa0nkbbAeCML2+a1/cUsd0TqBgVcxYW08GA==
 
 fill-range@^7.1.1:
   version "7.1.1"
