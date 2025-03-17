@@ -6276,10 +6276,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.0.1.tgz#1e67e92fa4b84cf3219e958f284fb2e0c5ab38f0"
-  integrity sha512-Y4gtkyQZb6+rGOyanG0uEmOph9IdySwmJ0dO3//weMNb2TDzkjKIQcJX090gDzRK74CbS/sIMfsLOSXHLFENaA==
+music-metadata@^11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.0.2.tgz#11acf530e5851675f676db9c75cecd55ba5238a4"
+  integrity sha512-KwsuJtF4hFJg1UXbTI+OfeC2hSYUq/ReFh4MejrXLZMo9zibiWeFqwqPj7REaSVp5M04HGUeKpppp8ed6GdZiw==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
