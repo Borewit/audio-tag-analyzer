@@ -24,7 +24,7 @@
     "@angular/platform-server": "^18.2.13",
     "@angular/router": "^18.2.13",
     "bootstrap": "4.6.2",
-    "core-js": "^3.41.0",
+    "core-js": "^3.42.0",
     "filepond": "^4.31.4",
     "music-metadata": "^11.0.1",
     "ngx-filepond": "^7.0.3",
