@@ -10,12 +10,20 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@angular-devkit/architect@0.1802.14", "@angular-devkit/architect@>= 0.1800.0 < 0.1900.0":
+"@angular-devkit/architect@0.1802.14":
   version "0.1802.14"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1802.14.tgz#da0bca3fc42844ae7b251593495d912d10b90ed4"
   integrity sha512-eplaGCXSlPwf1f4XwyzsYTd8/lJ0/Adm6XsODsBxvkZlIpLcps80/h2lH5MVJpoDREzIFu1BweDpYCoNK5yYZg==
   dependencies:
     "@angular-devkit/core" "18.2.14"
+    rxjs "7.8.1"
+
+"@angular-devkit/architect@0.1802.19", "@angular-devkit/architect@>= 0.1800.0 < 0.1900.0":
+  version "0.1802.19"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1802.19.tgz#8111ce2ba8f88c16e277b7af2a7fa4171531cca8"
+  integrity sha512-M4B1tzxGX1nWCZr9GMM8OO0yBJO2HFSdK8M8P74vEFQfKIeq3y16IQ5zlEveJrkCOFVtmlIy2C9foMCdNyBRMA==
+  dependencies:
+    "@angular-devkit/core" "18.2.19"
     rxjs "7.8.1"
 
 "@angular-devkit/build-angular@^18.2.14":
@@ -95,7 +103,7 @@
     "@angular-devkit/architect" "0.1802.14"
     rxjs "7.8.1"
 
-"@angular-devkit/core@18.2.14", "@angular-devkit/core@>= 18.0.0 < 19.0.0":
+"@angular-devkit/core@18.2.14":
   version "18.2.14"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-18.2.14.tgz#cd1f30e4a058ea5e2a765e6b9c4033a02d5fd513"
   integrity sha512-UGIGOjXuOyCW+5S4tINu7e6LOu738CmTw3h7Ui1I8OzdTIYJcYJrei8sgrwDwOYADRal+p0MeMlnykH3TM5XBA==
@@ -107,12 +115,24 @@
     rxjs "7.8.1"
     source-map "0.7.4"
 
-"@angular-devkit/schematics@18.2.14", "@angular-devkit/schematics@>= 18.0.0 < 19.0.0":
-  version "18.2.14"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-18.2.14.tgz#0cdc69503fee38cc190947cae1bbadf99ead24a6"
-  integrity sha512-mukjZIHHB7gWratq8fZwUq5WZ+1bF4feG/idXr1wgQ+/FqWjs2PP7HDesHVcPymmRulpTyCpB7TNB1O1fgnCpA==
+"@angular-devkit/core@18.2.19", "@angular-devkit/core@>= 18.0.0 < 19.0.0":
+  version "18.2.19"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-18.2.19.tgz#cca229fa212e59667a9ce49cceef1cc7a0ca13d2"
+  integrity sha512-Ptf92Zomc6FCr7GWmHKdgOUbA1GpctZwH/hRcpYpU3tM56MG2t5FOFpufnE595GgolOCktabkFEoODMG8PBVDQ==
   dependencies:
-    "@angular-devkit/core" "18.2.14"
+    ajv "8.17.1"
+    ajv-formats "3.0.1"
+    jsonc-parser "3.3.1"
+    picomatch "4.0.2"
+    rxjs "7.8.1"
+    source-map "0.7.4"
+
+"@angular-devkit/schematics@18.2.19", "@angular-devkit/schematics@>= 18.0.0 < 19.0.0":
+  version "18.2.19"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-18.2.19.tgz#2167adda2115cdfe78aec97f98463aad4810f017"
+  integrity sha512-P/0KjkzOf2ZShuShx3cBbjLI7XlcS6B/yCRBo1MQfCC4cZfmzPQoUEOSQeYZgy5pnC24f+dKh/+TWc5uYL/Lvg==
+  dependencies:
+    "@angular-devkit/core" "18.2.19"
     jsonc-parser "3.3.1"
     magic-string "0.30.11"
     ora "5.4.1"
@@ -215,17 +235,17 @@
     vite "5.4.14"
     watchpack "2.4.1"
 
-"@angular/cli@^18.2.14":
-  version "18.2.14"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-18.2.14.tgz#d25ff1da20ea699c88aeb15428610418de802540"
-  integrity sha512-kWgRRQtJPkr8iwN7DMbTi3sXOnv7H5QhbU/GgD3nNX3D8YCSPmnby4PAE/P3wn7FsIK9JsSchsCt7MZ37Urh9A==
+"@angular/cli@^18.2.19":
+  version "18.2.19"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-18.2.19.tgz#aab65dc0bd8ac6fcd5a0e7785a7d097fd7e21f1c"
+  integrity sha512-LGVMTc36JQuw8QX8Sclxyei306EQW3KslopXbf7cfqt6D5/fHS+FqqA0O7V8ob/vOGMca+l6hQD27nW5Y3W6pA==
   dependencies:
-    "@angular-devkit/architect" "0.1802.14"
-    "@angular-devkit/core" "18.2.14"
-    "@angular-devkit/schematics" "18.2.14"
+    "@angular-devkit/architect" "0.1802.19"
+    "@angular-devkit/core" "18.2.19"
+    "@angular-devkit/schematics" "18.2.19"
     "@inquirer/prompts" "5.3.8"
     "@listr2/prompt-adapter-inquirer" "2.0.15"
-    "@schematics/angular" "18.2.14"
+    "@schematics/angular" "18.2.19"
     "@yarnpkg/lockfile" "1.1.0"
     ini "4.1.3"
     jsonc-parser "3.3.1"
@@ -2459,13 +2479,13 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.24.0.tgz#0574d7e87b44ee8511d08cc7f914bcb802b70818"
   integrity sha512-fbMkAF7fufku0N2dE5TBXcNlg0pt0cJue4xBRE2Qc5Vqikxr4VCgKj/ht6SMdFcOacVA9rqF70APJ8RN/4vMJw==
 
-"@schematics/angular@18.2.14":
-  version "18.2.14"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-18.2.14.tgz#6bab715fbf49a01c64e95b70deea5f25d0f61f22"
-  integrity sha512-CHh6ew2Az71UlvVcnYeuMEwjwkZqR7y/9ebLzFRvczC71ZL8qPVBpBTVGbCpGBd54VEbCZVWRxBQoZZ5LP/aBw==
+"@schematics/angular@18.2.19":
+  version "18.2.19"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-18.2.19.tgz#def71404412479a699729eb45c1b8b67fc4304e5"
+  integrity sha512-s9aynH/fwB/LT94miVfsaL2C4Qd5BLgjMzWFx7iJ8Hyv7FjOBGYO6eGVovjCt2c6/abG+GQAk4EBOCfg3AUtCA==
   dependencies:
-    "@angular-devkit/core" "18.2.14"
-    "@angular-devkit/schematics" "18.2.14"
+    "@angular-devkit/core" "18.2.19"
+    "@angular-devkit/schematics" "18.2.19"
     jsonc-parser "3.3.1"
 
 "@sec-ant/readable-stream@^0.4.1":
