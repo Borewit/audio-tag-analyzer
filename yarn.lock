@@ -6280,17 +6280,17 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.6.0:
-  version "11.6.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.6.0.tgz#edc6c136c9ada31ee7ce9ed0c7a7c47546e9a54b"
-  integrity sha512-l7MbWpuGM5GK8gol22L9tou8d/IoFyS8dnsfLbO6cocjlyMwgyLaCIqdwhp4sN1Nzz/Ql/K9kRLvRJDCVKjO3g==
+music-metadata@^11.7.1:
+  version "11.7.1"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.7.1.tgz#885e6305d08c1175ee95ae185285c6a44de02d92"
+  integrity sha512-qoimzvpOnOi2VJpGz6Nz4SwmcYKe39TsAwlcNilgnDrGKNQDib35t0kj5fy1E71DQgqGApBeAKLmcV9pO3l/2w==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
     debug "^4.4.1"
     file-type "^21.0.0"
     media-typer "^1.1.0"
-    strtok3 "^10.3.1"
+    strtok3 "^10.3.2"
     token-types "^6.0.3"
     uint8array-extras "^1.4.0"
 
@@ -7966,10 +7966,10 @@ strip-json-comments@3.1.1, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-strtok3@^10.2.2, strtok3@^10.3.1:
-  version "10.3.1"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-10.3.1.tgz#80fe431a4ee652de4e33f14e11e15fd5170a627d"
-  integrity sha512-3JWEZM6mfix/GCJBBUrkA8p2Id2pBkyTkVCJKto55w080QBKZ+8R171fGrbiSp+yMO/u6F8/yUh7K4V9K+YCnw==
+strtok3@^10.2.2, strtok3@^10.3.2:
+  version "10.3.2"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-10.3.2.tgz#7e5d14d27dc69c1319f74a91f137851e1a373910"
+  integrity sha512-or9w505RhhY66+uoe5YOC5QO/bRuATaoim3XTh+pGKx5VMWi/HDhMKuCjDLsLJouU2zg9Hf1nLPcNW7IHv80kQ==
   dependencies:
     "@tokenizer/token" "^0.3.0"
 
