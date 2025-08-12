@@ -47,7 +47,7 @@ export const formatLabels: TagLabel[] = [
   }, {
     key: 'sampleRate',
     label: 'Sample-rate',
-    toText: v => Math.round(v / 100) / 10 + ' hz'
+    toText: v => Math.round(v / 100) / 10 + ' kHz'
   }, {
     key: 'bitsPerSample',
     label: 'Audio bit depth'
