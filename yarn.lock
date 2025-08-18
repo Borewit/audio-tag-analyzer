@@ -1543,6 +1543,11 @@
     "@babel/helper-validator-identifier" "^7.25.7"
     to-fast-properties "^2.0.0"
 
+"@borewit/text-codec@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@borewit/text-codec/-/text-codec-0.1.1.tgz#7e7f27092473d5eabcffef693a849f2cc48431da"
+  integrity sha512-5L/uBxmjaCIX5h8Z+uu+kA9BQLkc/Wl06UGR5ajNRxu+/XjonB5i8JpgFMrPj3LXTCPA0pv8yxUvbUi+QthGGA==
+
 "@colors/colors@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
@@ -6273,19 +6278,19 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.7.3:
-  version "11.7.3"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.7.3.tgz#080a2a5b641accdb1bf0e8ca30a0393e91811bd1"
-  integrity sha512-xYbaSFpHi6qOUTFCb7fvC4/6Uk1NAJey2pSwNQPqJkCLwleYGUWVRKlxnNy2MsTaDRPnIwXdkgrmeiP/GDq/ww==
+music-metadata@^11.8.2:
+  version "11.8.2"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.8.2.tgz#61053b956d31eae479f6c045210d559ed8fc583d"
+  integrity sha512-k7fxn9GCl27b+P+suLwMuEuS1Kft32P1jBZ/MXLh5iRTll60qbWWc/hh+Xvv70khyykcGwsVzddURzLdKymZ0g==
   dependencies:
+    "@borewit/text-codec" "^0.1.0"
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
     debug "^4.4.1"
     file-type "^21.0.0"
     media-typer "^1.1.0"
     strtok3 "^10.3.4"
-    token-types "^6.0.4"
-    uint8array-extras "^1.4.0"
+    token-types "^6.1.1"
 
 mute-stream@^1.0.0:
   version "1.0.0"
@@ -8088,11 +8093,12 @@ toidentifier@1.0.1:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
 
-token-types@^6.0.0, token-types@^6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/token-types/-/token-types-6.0.4.tgz#1582ef6d1d77398cd738c87ea38dd5729fa49ec5"
-  integrity sha512-MD9MjpVNhVyH4fyd5rKphjvt/1qj+PtQUz65aFqAZA6XniWAuSFRjLk3e2VALEFlh9OwBpXUN7rfeqSnT/Fmkw==
+token-types@^6.0.0, token-types@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/token-types/-/token-types-6.1.1.tgz#85bd0ada82939b9178ecd5285881a538c4c00fdd"
+  integrity sha512-kh9LVIWH5CnL63Ipf0jhlBIy0UsrMj/NJDfpsy1SqOXlLKEVyXXYrnFxFT1yOOYVGBSApeVnjPw/sBz5BfEjAQ==
   dependencies:
+    "@borewit/text-codec" "^0.1.0"
     "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
 
