@@ -6361,10 +6361,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.10.4:
-  version "11.10.4"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.10.4.tgz#9bb4f03d886fdea5f7c57a09ee9213984609ca85"
-  integrity sha512-W8ByTxUk3p2PHycZraD+XVOzho5zONRqP9XVDwK4kTDGwfDrAmsNXMxNgSii8bI/GDC86mtk5kwGh1Lv/imNlA==
+music-metadata@^11.10.5:
+  version "11.10.5"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.10.5.tgz#ed1eb2c521fa479224b3fb1cdfe4b4e918605d57"
+  integrity sha512-G0i86zpL7AARmZx8XEkHBVf7rJMQDFfGEFc1C83//rKHGuaK0gwxmNNeo9mjm4g07KUwoT0s0dW7g5QwZhi+qQ==
   dependencies:
     "@borewit/text-codec" "^0.2.1"
     "@tokenizer/token" "^0.3.0"
