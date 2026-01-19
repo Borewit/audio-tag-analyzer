@@ -4715,10 +4715,10 @@ file-entry-cache@^8.0.0:
   dependencies:
     flat-cache "^4.0.0"
 
-file-type@^21.2.0:
-  version "21.2.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-21.2.0.tgz#153f7d7d4279ba440f84ae80fd99cdd27fba788c"
-  integrity sha512-vCYBgFOrJQLoTzDyAXAL/RFfKnXXpUYt4+tipVy26nJJhT7ftgGETf2tAQF59EEL61i3MrorV/PG6tf7LJK7eg==
+file-type@^21.3.0:
+  version "21.3.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-21.3.0.tgz#03334acfe59cc22f72fce2a1327c5a1190f0b7de"
+  integrity sha512-8kPJMIGz1Yt/aPEwOsrR97ZyZaD1Iqm8PClb1nYFclUCkBi0Ma5IsYNQzvSFS9ib51lWyIw5mIT9rWzI/xjpzA==
   dependencies:
     "@tokenizer/inflate" "^0.4.1"
     strtok3 "^10.3.4"
@@ -6361,20 +6361,21 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.10.4:
-  version "11.10.4"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.10.4.tgz#9bb4f03d886fdea5f7c57a09ee9213984609ca85"
-  integrity sha512-W8ByTxUk3p2PHycZraD+XVOzho5zONRqP9XVDwK4kTDGwfDrAmsNXMxNgSii8bI/GDC86mtk5kwGh1Lv/imNlA==
+music-metadata@^11.10.6:
+  version "11.10.6"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.10.6.tgz#ff995513b675d3a7b73ca476ac8969f95bd1b00a"
+  integrity sha512-Wb1EigQ3/Z7zrQl0XP16ipxB+rN0J0CHUTbTRtVu9GViALYafb6xT5UGzIfszCG1lscmkutjHO2RYbJ9TFyslA==
   dependencies:
     "@borewit/text-codec" "^0.2.1"
     "@tokenizer/token" "^0.3.0"
     content-type "^1.0.5"
     debug "^4.4.3"
-    file-type "^21.2.0"
+    file-type "^21.3.0"
     media-typer "^1.1.0"
     strtok3 "^10.3.4"
     token-types "^6.1.2"
     uint8array-extras "^1.5.0"
+    win-guid "^0.1.3"
 
 mute-stream@^1.0.0:
   version "1.0.0"
@@ -8695,6 +8696,11 @@ wildcard@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/wildcard/-/wildcard-2.0.1.tgz#5ab10d02487198954836b6349f74fff961e10f67"
   integrity sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==
+
+win-guid@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/win-guid/-/win-guid-0.1.3.tgz#51e055e8a82d7bbf88e2c3fe7bbe42f4f63b9276"
+  integrity sha512-Ah25z4XnblBGFgrcVS5QK7qLkvsFFA35+G+AnHkELUPHXPYWFOSVNMuAxf1zW0B+4X911IBLD+TvB771om0gmg==
 
 word-wrap@^1.2.5:
   version "1.2.5"
