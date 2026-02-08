@@ -6404,10 +6404,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.11.1:
-  version "11.11.1"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.11.1.tgz#56ed83c41f64cca0cf3078922edfe3614ee42db8"
-  integrity sha512-8FT+lSLznASDhn5KNJtQE6ZH95VqhxtKWNPrvdfhlqgbdZZEEAXehx+xpUvas4VuEZAu49BhQgLa3NlmPeRaww==
+music-metadata@^11.12.0:
+  version "11.12.0"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.12.0.tgz#ac4dde2a0196c9b793d28abd4cadcd2142b3530e"
+  integrity sha512-9ChYnmVmyHvFxR2g0MWFSHmJfbssRy07457G4gbb4LA9WYvyZea/8EMbqvg5dcv4oXNCNL01m8HXtymLlhhkYg==
   dependencies:
     "@borewit/text-codec" "^0.2.1"
     "@tokenizer/token" "^0.3.0"
@@ -6418,7 +6418,7 @@ music-metadata@^11.11.1:
     strtok3 "^10.3.4"
     token-types "^6.1.2"
     uint8array-extras "^1.5.0"
-    win-guid "^0.2.0"
+    win-guid "^0.2.1"
 
 mute-stream@^1.0.0:
   version "1.0.0"
@@ -8745,10 +8745,10 @@ wildcard@^2.0.1:
   resolved "https://registry.yarnpkg.com/wildcard/-/wildcard-2.0.1.tgz#5ab10d02487198954836b6349f74fff961e10f67"
   integrity sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==
 
-win-guid@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/win-guid/-/win-guid-0.2.0.tgz#63180c34e127f72ada4f4d9cdad5b132d3f0384a"
-  integrity sha512-iekGhWzFQSunvE87ndXxoa6UgyQbkL4MmbYTFhQnk94pVsAW89mWnvW1zI3JMnypUm8jykJaITudspoR8NrRBQ==
+win-guid@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/win-guid/-/win-guid-0.2.1.tgz#576915ba5e10bf92ec6a32b71ab06b5f75403fc0"
+  integrity sha512-gEIQU4mkgl2OPeoNrWflcJFJ3Ae2BPd4eCsHHA/XikslkIVms/nHhvnvzIZV7VLmBvtFlDOzLt9rrZT+n6D67A==
 
 word-wrap@^1.2.5:
   version "1.2.5"
