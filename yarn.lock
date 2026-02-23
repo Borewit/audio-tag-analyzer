@@ -6404,10 +6404,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-music-metadata@^11.12.0:
-  version "11.12.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.12.0.tgz#ac4dde2a0196c9b793d28abd4cadcd2142b3530e"
-  integrity sha512-9ChYnmVmyHvFxR2g0MWFSHmJfbssRy07457G4gbb4LA9WYvyZea/8EMbqvg5dcv4oXNCNL01m8HXtymLlhhkYg==
+music-metadata@^11.12.1:
+  version "11.12.1"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-11.12.1.tgz#254d70ff9d2a85f02974b2f024f00e3e6eabac17"
+  integrity sha512-j++ltLxHDb5VCXET9FzQ8bnueiLHwQKgCO7vcbkRH/3F7fRjPkv6qncGEJ47yFhmemcYtgvsOAlcQ1dRBTkDjg==
   dependencies:
     "@borewit/text-codec" "^0.2.1"
     "@tokenizer/token" "^0.3.0"
